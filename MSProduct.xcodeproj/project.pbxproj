@@ -34,6 +34,7 @@
 		2CA33EB81C644CF200D0DA03 /* MSDisplayUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EB71C644CF200D0DA03 /* MSDisplayUser.m */; settings = {ASSET_TAGS = (); }; };
 		2CA33EBC1C6456C200D0DA03 /* MSPeopleCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EBB1C6456C200D0DA03 /* MSPeopleCellFrame.m */; settings = {ASSET_TAGS = (); }; };
 		2CA33EBF1C64572700D0DA03 /* MSListUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EBE1C64572700D0DA03 /* MSListUser.m */; settings = {ASSET_TAGS = (); }; };
+		2CA33EC21C645EF500D0DA03 /* MSUserCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EC11C645EF500D0DA03 /* MSUserCard.m */; settings = {ASSET_TAGS = (); }; };
 		2CDB91851C6228C1003A631F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB91841C6228C1003A631F /* main.m */; };
 		2CDB91901C6228C1003A631F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB918F1C6228C1003A631F /* Assets.xcassets */; };
 		2CDB919E1C622E76003A631F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB919D1C622E76003A631F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -562,6 +563,8 @@
 		2CA33EBB1C6456C200D0DA03 /* MSPeopleCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPeopleCellFrame.m; sourceTree = "<group>"; };
 		2CA33EBD1C64572700D0DA03 /* MSListUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSListUser.h; sourceTree = "<group>"; };
 		2CA33EBE1C64572700D0DA03 /* MSListUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSListUser.m; sourceTree = "<group>"; };
+		2CA33EC01C645EF500D0DA03 /* MSUserCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserCard.h; sourceTree = "<group>"; };
+		2CA33EC11C645EF500D0DA03 /* MSUserCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserCard.m; sourceTree = "<group>"; };
 		2CDB91801C6228C1003A631F /* MSProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDB91841C6228C1003A631F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CDB918F1C6228C1003A631F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1274,6 +1277,8 @@
 		2CE418291C62314A00CC617F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2CA33EC01C645EF500D0DA03 /* MSUserCard.h */,
+				2CA33EC11C645EF500D0DA03 /* MSUserCard.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3937,6 +3942,7 @@
 				2C7FEB771C6344A000183315 /* MSThingController.m in Sources */,
 				2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */,
 				2CA33EB81C644CF200D0DA03 /* MSDisplayUser.m in Sources */,
+				2CA33EC21C645EF500D0DA03 /* MSUserCard.m in Sources */,
 				2CA33EB51C644C3A00D0DA03 /* MSBaseUser.m in Sources */,
 				2CE41CA71C62398D00CC617F /* MSSystem.m in Sources */,
 				2CA33EBF1C64572700D0DA03 /* MSListUser.m in Sources */,
