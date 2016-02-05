@@ -9,6 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MSHttpManager.h"
+#import "MSApiConfig.h"
 
 @interface MSDataFactory : NSObject
 

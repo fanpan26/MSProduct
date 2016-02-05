@@ -36,4 +36,6 @@
 @property(nonatomic,copy) NSString *achieve;//成就
 @property(nonatomic,copy) NSString *identitytitle;//身份标识
 
+-(instancetype)initWithDictionary:(NSDictionary *)dict;
+
 @end

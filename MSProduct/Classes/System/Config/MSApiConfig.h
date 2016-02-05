@@ -6,12 +6,6 @@
 //  Copyright © 2016年 Macrosage. All rights reserved.
 //
 
-#ifndef MSApiConfig_h
-#define MSApiConfig_h
-
-
-#endif /* MSApiConfig_h */
-#import "MSSystem.h"
 
 /*成功代码 10000*/
 #define kMSApiCodeSuccess 10000
@@ -29,4 +23,9 @@
  startcv 从第几个人开始
  cvnumber 当前登录人的咕噜号
  */
-#define kMSApiGetFigureList kMSSysURL + @"/figure/list"
+#define kMSApiURLGetFigureList @"/figure/list"
+/*
+ 获取单条用户信息
+ cvnumber 用户的cvnumber
+ */
+#define kMSApiURLGetUserInfo @"/user/info"

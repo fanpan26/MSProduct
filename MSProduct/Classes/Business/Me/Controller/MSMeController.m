@@ -7,6 +7,8 @@
 //
 
 #import "MSMeController.h"
+#import "MSUserData.h"
+#import "MSUserCard.h"
 
 @implementation MSMeController
 
@@ -14,6 +16,13 @@
 {
     [super viewDidLoad];
     self.title = @"我的";
+    [[MSUserData sharedData] getUserInfo:131742 success:^(MSUserCard *card) {
+        if (card) {
+            NSLog(@"%@",card.name);
+        }else{
+            NSLog(@"获取信息失败");
+        }
+    }];
 }
 
 @end

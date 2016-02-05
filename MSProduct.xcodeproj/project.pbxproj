@@ -35,6 +35,7 @@
 		2CA33EBC1C6456C200D0DA03 /* MSPeopleCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EBB1C6456C200D0DA03 /* MSPeopleCellFrame.m */; settings = {ASSET_TAGS = (); }; };
 		2CA33EBF1C64572700D0DA03 /* MSListUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EBE1C64572700D0DA03 /* MSListUser.m */; settings = {ASSET_TAGS = (); }; };
 		2CA33EC21C645EF500D0DA03 /* MSUserCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EC11C645EF500D0DA03 /* MSUserCard.m */; settings = {ASSET_TAGS = (); }; };
+		2CA33EC51C647F2A00D0DA03 /* MSUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA33EC41C647F2A00D0DA03 /* MSUserData.m */; settings = {ASSET_TAGS = (); }; };
 		2CDB91851C6228C1003A631F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB91841C6228C1003A631F /* main.m */; };
 		2CDB91901C6228C1003A631F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB918F1C6228C1003A631F /* Assets.xcassets */; };
 		2CDB919E1C622E76003A631F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB919D1C622E76003A631F /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -565,6 +566,8 @@
 		2CA33EBE1C64572700D0DA03 /* MSListUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSListUser.m; sourceTree = "<group>"; };
 		2CA33EC01C645EF500D0DA03 /* MSUserCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserCard.h; sourceTree = "<group>"; };
 		2CA33EC11C645EF500D0DA03 /* MSUserCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserCard.m; sourceTree = "<group>"; };
+		2CA33EC31C647F2A00D0DA03 /* MSUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSUserData.h; sourceTree = "<group>"; };
+		2CA33EC41C647F2A00D0DA03 /* MSUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSUserData.m; sourceTree = "<group>"; };
 		2CDB91801C6228C1003A631F /* MSProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDB91841C6228C1003A631F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CDB918F1C6228C1003A631F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1168,6 +1171,8 @@
 				2C98C4641C64144F001510C0 /* MSHttpManager.m */,
 				2C98C4661C6438B6001510C0 /* MSDataFactory.h */,
 				2C98C4671C6438B6001510C0 /* MSDataFactory.m */,
+				2CA33EC31C647F2A00D0DA03 /* MSUserData.h */,
+				2CA33EC41C647F2A00D0DA03 /* MSUserData.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -3955,6 +3960,7 @@
 				2CE418551C62367100CC617F /* MSTabBarController.m in Sources */,
 				2C7FEB881C636EC000183315 /* MSBaseCell.m in Sources */,
 				2CE418521C62365100CC617F /* MSNavigationController.m in Sources */,
+				2CA33EC51C647F2A00D0DA03 /* MSUserData.m in Sources */,
 				2CDB919E1C622E76003A631F /* AppDelegate.m in Sources */,
 				2CE4184F1C6235F300CC617F /* MSMeController.m in Sources */,
 				2C98C4681C6438B6001510C0 /* MSDataFactory.m in Sources */,

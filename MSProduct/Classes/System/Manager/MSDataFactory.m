@@ -8,7 +8,6 @@
 
 #import "MSDataFactory.h"
 #import "MSSystem.h"
-#import "MSApiConfig.h"
 
 //{"result":10000,"msg":"成功","data":""}
 static NSString *const MSRequestSuccessResultCodeForResult = @"result";
