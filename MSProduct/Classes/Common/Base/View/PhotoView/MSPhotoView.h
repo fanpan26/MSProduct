@@ -32,6 +32,9 @@ typedef  NS_ENUM(NSInteger,MSPhotoViewType){
 
 @property(nonatomic,assign) MSPhotoViewType photoType;
 
+
+@property(nonatomic,copy) NSString *image;
+
 -(instancetype)initWithPhoto:(NSString *)image;
 
 -(instancetype) initWithPhoto:(NSString *)image size:(MSPhotoViewSize)size;

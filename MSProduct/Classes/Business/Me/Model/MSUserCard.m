@@ -24,6 +24,9 @@
         _landline = [self resetValue:dict[@"landline"]];
         _name = [self resetValue:dict[@"name"]];
         _weixin = [self resetValue:dict[@"weixin"]];
+        _mobile = [self resetValue:dict[@"mobile"]];
+        _ability = @"能力标签1，能力标签2";
+        _achieve = @"成就标签1，成就标签2";
     }
     return  self;
 }

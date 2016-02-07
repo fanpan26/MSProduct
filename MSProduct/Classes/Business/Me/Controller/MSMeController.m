@@ -9,6 +9,11 @@
 #import "MSMeController.h"
 #import "MSUserData.h"
 #import "MSUserCard.h"
+#import "MSUserCardController.h"
+
+@interface MSMeController()
+
+@end
 
 @implementation MSMeController
 
@@ -16,13 +21,19 @@
 {
     [super viewDidLoad];
     self.title = @"我的";
-    [[[MSUserData alloc] init] getUserInfo:131742 success:^(MSUserCard *card) {
-        if (card) {
-            NSLog(@"%@",card.name);
-        }else{
-            NSLog(@"获取信息失败");
-        }
-    }];
+   
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+    btn.backgroundColor = [UIColor redColor];
+    [btn addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+
+}
+
+- (void)push
+{
+    MSUserCardController *userCardController = [[MSUserCardController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:userCardController animated:YES];
 }
 
 @end

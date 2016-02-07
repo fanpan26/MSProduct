@@ -28,6 +28,7 @@
 @property(nonatomic,copy) NSString *company;
 @property(nonatomic,copy) NSString *email;
 @property(nonatomic,assign) BOOL hidemobile;
+@property(nonatomic,copy) NSString *mobile;
 @property(nonatomic,copy) NSString *position;
 @property(nonatomic,copy) NSString *landline;
 @property(nonatomic,copy) NSString *weixin;

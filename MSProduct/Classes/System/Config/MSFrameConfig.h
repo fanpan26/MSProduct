@@ -24,3 +24,10 @@
 #define kMSTableViewCellContentPaddingVertical 10;
 /*表左右两侧间距*/
 #define kMSTableViewPaddingLeftRight 10
+
+/*颜色*/
+#define kMSColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+/*字体*/
+#define kMSFont(f) [UIFont systemFontOfSize:(f)]
+/*默认字体*/
+#define kMSFontDefault kMSFont(15)

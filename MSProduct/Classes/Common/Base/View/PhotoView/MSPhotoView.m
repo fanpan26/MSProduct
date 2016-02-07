@@ -83,6 +83,12 @@
     }
 }
 
+-(void)setImage:(NSString *)image
+{
+    _image = image;
+    [_photoView setImageWithUrl:image placeHolder:nil];
+}
+
 //photo
 -(void)setPhotoType:(MSPhotoViewType)photoType
 {
