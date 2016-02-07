@@ -16,7 +16,7 @@
 {
     [super viewDidLoad];
     self.title = @"人物";
-    [MSDataFactory getWithURL:@"/figure/list?startcv=0&cvnumber=131742" params:nil success:^(id JSON) {
+    [[[MSDataFactory alloc] init] getWithURL:@"/figure/list?startcv=0&cvnumber=131742" params:nil success:^(id JSON) {
         NSArray *displayUsers = [MSDisplayUser displayUsers:JSON[@"view"]];
         NSLog(@"%@",displayUsers);
     } failure:^(id ERRMSG) {

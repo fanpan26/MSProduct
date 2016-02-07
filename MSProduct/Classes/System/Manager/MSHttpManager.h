@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSSingleton.h"
 
 //请求成功回调
 typedef void(^MSRequestSuccessCallBack)(id JSON);
@@ -17,10 +18,10 @@ typedef void(^MSRequestResultSuccessCallBack)(id JSON);
 //请求结果 result > 10000 回调（非正常结果，服务器错误或者其他）
 typedef void(^MSRequestResultFailureCallBack)(id ERRMSG);
 
+
 @interface MSHttpManager : NSObject
 
-//单例
-+(instancetype)manager;
+single_interface(MSHttpManager)
 /*
     get方法请求数据
     url：接口路径

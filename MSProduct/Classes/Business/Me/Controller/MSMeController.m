@@ -16,7 +16,7 @@
 {
     [super viewDidLoad];
     self.title = @"我的";
-    [[MSUserData sharedData] getUserInfo:131742 success:^(MSUserCard *card) {
+    [[[MSUserData alloc]init] getUserInfo:131742 success:^(MSUserCard *card) {
         if (card) {
             NSLog(@"%@",card.name);
         }else{

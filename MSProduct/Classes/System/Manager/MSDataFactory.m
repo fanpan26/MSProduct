@@ -16,13 +16,13 @@ static NSString *const MSRequestSuccessResultCodeForData = @"data";
 
 @implementation MSDataFactory
 
-+(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
+-(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
 {
     NSString *platUrl = kMSSysURL;//平台url  gurucv、ruc等
     NSString *fullPath = [NSString stringWithFormat:@"%@%@%@",kMSBaseApiDomain,platUrl,url];
     
-    MSHttpManager *manager = [MSHttpManager manager];
-    
+    MSHttpManager *manager = [MSHttpManager sharedMSHttpManager];
+    NSLog(@"%@",manager);
     [manager getWithURL:fullPath params:params success:^(id JSON) {
         
         [self handleJSON:JSON success:success failure:failure];
@@ -34,11 +34,11 @@ static NSString *const MSRequestSuccessResultCodeForData = @"data";
     }];
 }
 
-+(void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
+-(void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
 {
     NSString *fullPath = [kMSBaseApiDomain stringByAppendingString:url];
     
-    MSHttpManager *manager = [MSHttpManager manager];
+    MSHttpManager *manager = [MSHttpManager sharedMSHttpManager];
     
     [manager postWithURL:fullPath params:params success:^(id JSON) {
         
@@ -52,7 +52,7 @@ static NSString *const MSRequestSuccessResultCodeForData = @"data";
 }
 
 /*private*/
-+(void)handleJSON:(id) JSON success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
+-(void)handleJSON:(id) JSON success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
 {
     NSInteger result = [JSON[MSRequestSuccessResultCodeForResult] longLongValue];
     if (result == kMSApiCodeSuccess) {
@@ -68,5 +68,4 @@ static NSString *const MSRequestSuccessResultCodeForData = @"data";
     }
 
 }
-
 @end

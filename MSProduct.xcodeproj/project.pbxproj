@@ -542,6 +542,7 @@
 		2C7FEB901C6370A000183315 /* UIImage+MS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MS.m"; sourceTree = "<group>"; };
 		2C7FEB921C63710900183315 /* MSPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPeopleCell.h; sourceTree = "<group>"; };
 		2C7FEB931C63710900183315 /* MSPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPeopleCell.m; sourceTree = "<group>"; };
+		2C84F92B1C66E5490029BE6C /* MSSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSingleton.h; sourceTree = "<group>"; };
 		2C98C44E1C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		2C98C44F1C640F6B001510C0 /* tab_buddy_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_buddy_nor@2x.png"; sourceTree = "<group>"; };
 		2C98C4511C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -1437,6 +1438,7 @@
 				2C98C4621C641434001510C0 /* Manager */,
 				2C7FEB781C63450D00183315 /* Model */,
 				2CE41CA11C62395000CC617F /* Config */,
+				2C84F92B1C66E5490029BE6C /* MSSingleton.h */,
 			);
 			path = System;
 			sourceTree = "<group>";

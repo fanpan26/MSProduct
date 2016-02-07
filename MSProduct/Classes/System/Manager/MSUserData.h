@@ -11,9 +11,8 @@
 @class  MSUserCard;
 typedef void(^MSUserCardResult)(MSUserCard *card) ;
 
-@interface MSUserData : MSDataFactory
+@interface MSUserData:NSObject
 
-+(instancetype)sharedData;
 
 -(void)getUserInfo:(NSInteger)cvnumber success:(MSUserCardResult)success;
 

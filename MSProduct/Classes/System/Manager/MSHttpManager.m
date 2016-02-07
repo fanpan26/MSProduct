@@ -11,15 +11,8 @@
 
 @implementation MSHttpManager
 
-+(instancetype)manager
-{
-    static MSHttpManager *instance;
-    dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [[MSHttpManager alloc] init];
-    });
-    return instance;
-}
+single_implementation(MSHttpManager)
+
 -(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
 {
     [self requestWithType:@"GET" url:url params:params success:^(id JSON) {
