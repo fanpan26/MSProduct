@@ -20,6 +20,7 @@
 		2C7FEB8E1C63708700183315 /* UIImage+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB8D1C63708700183315 /* UIImage+MS.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB901C6370A000183315 /* UIImage+MS.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FEB941C63710900183315 /* MSPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB931C63710900183315 /* MSPeopleCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C84F9391C671D860029BE6C /* MSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84F9381C671D860029BE6C /* MSPhotoView.m */; settings = {ASSET_TAGS = (); }; };
 		2C98C4591C640F6B001510C0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C44E1C640F6B001510C0 /* Contents.json */; settings = {ASSET_TAGS = (); }; };
 		2C98C45A1C640F6B001510C0 /* tab_buddy_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C44F1C640F6B001510C0 /* tab_buddy_nor@2x.png */; settings = {ASSET_TAGS = (); }; };
 		2C98C45B1C640F6B001510C0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C4511C640F6B001510C0 /* Contents.json */; settings = {ASSET_TAGS = (); }; };
@@ -543,6 +544,8 @@
 		2C7FEB921C63710900183315 /* MSPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPeopleCell.h; sourceTree = "<group>"; };
 		2C7FEB931C63710900183315 /* MSPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPeopleCell.m; sourceTree = "<group>"; };
 		2C84F92B1C66E5490029BE6C /* MSSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSingleton.h; sourceTree = "<group>"; };
+		2C84F9371C671D860029BE6C /* MSPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPhotoView.h; sourceTree = "<group>"; };
+		2C84F9381C671D860029BE6C /* MSPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPhotoView.m; sourceTree = "<group>"; };
 		2C98C44E1C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		2C98C44F1C640F6B001510C0 /* tab_buddy_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_buddy_nor@2x.png"; sourceTree = "<group>"; };
 		2C98C4511C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -1118,9 +1121,11 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		2C84F92C1C67120C0029BE6C /* PhotoView */ = {
+		2C84F9361C671D710029BE6C /* PhotoView */ = {
 			isa = PBXGroup;
 			children = (
+				2C84F9371C671D860029BE6C /* MSPhotoView.h */,
+				2C84F9381C671D860029BE6C /* MSPhotoView.m */,
 			);
 			path = PhotoView;
 			sourceTree = "<group>";
@@ -1527,7 +1532,7 @@
 		2CE418461C62331900CC617F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C84F92C1C67120C0029BE6C /* PhotoView */,
+				2C84F9361C671D710029BE6C /* PhotoView */,
 				2C7FEB851C636E9300183315 /* Cell */,
 			);
 			path = View;
@@ -3958,6 +3963,7 @@
 				2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */,
 				2CA33EB81C644CF200D0DA03 /* MSDisplayUser.m in Sources */,
 				2CA33EC21C645EF500D0DA03 /* MSUserCard.m in Sources */,
+				2C84F9391C671D860029BE6C /* MSPhotoView.m in Sources */,
 				2CA33EB51C644C3A00D0DA03 /* MSBaseUser.m in Sources */,
 				2CE41CA71C62398D00CC617F /* MSSystem.m in Sources */,
 				2CA33EBF1C64572700D0DA03 /* MSListUser.m in Sources */,
