@@ -20,7 +20,7 @@
         NSArray *displayUsers = [MSDisplayUser displayUsers:JSON[@"view"]];
         NSLog(@"%@",displayUsers);
     } failure:^(id ERRMSG) {
-        
+        NSLog(@"%@",ERRMSG);
     }];
 }
 
