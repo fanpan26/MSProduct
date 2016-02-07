@@ -118,7 +118,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/Me/Controller/MSMeController.m"
@@ -150,7 +150,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/Me/Controller/MSMeController.m"
@@ -166,7 +166,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/System/Manager/MSUserData.m"
@@ -182,7 +182,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/System/Manager/MSUserData.m"
@@ -198,7 +198,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/System/Manager/MSDataFactory.m"
@@ -230,7 +230,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/System/Manager/MSUserData.m"
@@ -243,14 +243,14 @@
             landmarkType = "5">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[MSUserData getUserInfo:success:]"
                   moduleName = "MSProduct"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
-                  timestampString = "476505571.247825"
+                  timestampString = "476507985.917686"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -258,14 +258,14 @@
                   offsetFromSymbolStart = "71">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "__34-[MSUserData getUserInfo:success:]_block_invoke"
                   moduleName = "MSProduct"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
-                  timestampString = "476505571.247969"
+                  timestampString = "476507985.917832"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -305,6 +305,99 @@
             endingLineNumber = "25"
             landmarkName = "-getWithURL:params:success:failure:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MSProduct/Classes/System/Manager/MSUserData.m"
+            timestampString = "476507998.687557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "-getUserInfo:success:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MSUserData getUserInfo:success:]"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
+                  timestampString = "476507998.68998"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "357">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[MSUserData getUserInfo:success:]_block_invoke"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
+                  timestampString = "476507998.69016"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
+                  timestampString = "476507998.69028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
+                  timestampString = "476507998.690398"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__34-[MSUserData getUserInfo:success:]_block_invoke21"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSUserData.m"
+                  timestampString = "476507998.690511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
