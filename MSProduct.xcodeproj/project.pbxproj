@@ -1118,6 +1118,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2C84F92C1C67120C0029BE6C /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoView;
+			sourceTree = "<group>";
+		};
 		2C98C44C1C640F6B001510C0 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -1520,6 +1527,7 @@
 		2CE418461C62331900CC617F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C84F92C1C67120C0029BE6C /* PhotoView */,
 				2C7FEB851C636E9300183315 /* Cell */,
 			);
 			path = View;
