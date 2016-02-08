@@ -14,6 +14,7 @@
 #import "MSListUser.h"
 #import "MSDisplayUser.h"
 #import "MSScrollImageCell.h"
+#import "MSSearchBar.h"
 
 @interface MSPeopleController()
 {
@@ -34,7 +35,7 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 {
     [super viewDidLoad];
     [self buildUI];
-    [self loadData];
+    [self loadData:nil];
 }
 
 - (void)buildUI
@@ -44,12 +45,26 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
     [self.tableView registerClass:[MSPeopleCell class] forCellReuseIdentifier:kMSPeopleListCellID];
 }
 
--(void)loadData
+-(void)startHeaderRefreshing
+{
+    [self loadData:^{
+        [super startHeaderRefreshing];
+    }];
+}
+
+-(void)startFooterRefreshing
+{
+    [self loadMoreData:^{
+        [super startFooterRefreshing];
+    }];
+}
+
+-(void)loadData:(void(^)())finish
 {
     arrayListUsers = [NSMutableArray array];
     arrayDisplayUsers = [NSMutableArray array];
     //加载数据
-    [[MSUserData alloc] getListUser:0 cvnumber:131742 success:^(MSPeopleResult *people) {
+    [[MSUserData alloc] getListUser:0 cvnumber:131276 success:^(MSPeopleResult *people) {
         [people.listUsers enumerateObjectsUsingBlock:^(MSListUser *listUser, NSUInteger idx, BOOL * _Nonnull stop) {
             MSPeopleCellFrame *f = [[MSPeopleCellFrame alloc] init];
             f.user = listUser;
@@ -59,21 +74,58 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
         arrayDisplayUsers = [NSMutableArray arrayWithArray:people.displayUsers];
         //刷新表格
         [self.tableView reloadData];
+        if (finish) {
+            finish();
+        }
     }];
+}
+//加载更多
+-(void)loadMoreData:(void(^)())finish
+{
+    MSListUser *lastUser = [(MSPeopleCellFrame *)[arrayListUsers lastObject] user];
+    if (!lastUser) {
+        return;
+    }
+    //取出最后一条cvnumber
+    [[MSUserData alloc] getListUser:lastUser.cvnumber cvnumber:131276 success:^(MSPeopleResult *people) {
+        [people.listUsers enumerateObjectsUsingBlock:^(MSListUser *listUser, NSUInteger idx, BOOL * _Nonnull stop) {
+            MSPeopleCellFrame *f = [[MSPeopleCellFrame alloc] init];
+            f.user = listUser;
+            [arrayListUsers addObject:f];
+        }];
+        
+       // arrayDisplayUsers = [NSMutableArray arrayWithArray:people.displayUsers];
+        //刷新表格
+        [self.tableView reloadData];
+        if (finish) {
+            finish();
+        }
+    }];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+        MSSearchBar *searchBar = [[MSSearchBar alloc] init];
+        return searchBar;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
+    if (indexPath.row == 0) {
         return [MSScrollImageCell scrollHeight];
     }
-    MSPeopleCellFrame *f = arrayListUsers[indexPath.row];
+    MSPeopleCellFrame *f = arrayListUsers[indexPath.row - 1];
     return f.cellHeight;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section ==0) {
+    if (indexPath.row ==0) {
         MSScrollImageCell *scrollCell = [[MSScrollImageCell alloc] init];
         scrollCell.scrollImages = arrayDisplayUsers;
         return scrollCell;
@@ -82,22 +134,22 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
     listCell.indexPath = indexPath;
     listCell.myTableView = tableView;
     
-    MSPeopleCellFrame *f = arrayListUsers[indexPath.row];
+    MSPeopleCellFrame *f = arrayListUsers[indexPath.row - 1];
     
     listCell.cellFrame = f;
     
     return listCell;
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 2;
+    return 44.0;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return section == 0 ? 1 : arrayListUsers.count;
+    return arrayListUsers.count + 1;
 }
 
 @end

@@ -33,7 +33,9 @@
     memory.tabBarItem = [[UITabBarItem alloc] initWithTitle:kMSSysTitle image:[UIImage imageNamed:@"tabbar_home"] tag:1];
      [childControllers addObject:memory];
     //人物
-    MSNavigationController *people = [[MSNavigationController alloc] initWithRootViewController:[[MSPeopleController alloc] init]];
+    MSPeopleController *peopleChild = [[MSPeopleController alloc] init];
+    peopleChild.shoudUseRefresh = YES;
+    MSNavigationController *people = [[MSNavigationController alloc] initWithRootViewController:peopleChild];
     people.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人物" image:[UIImage imageNamed:@"tabbar_profile"] tag:2];
     [childControllers addObject:people];
     //有事

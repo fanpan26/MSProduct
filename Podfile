@@ -5,3 +5,5 @@ pod 'Masonry'
 pod ‘SDWebImage’
 pod ‘MJExtension’
 pod ‘MBProgressHUD’
+pod 'FMDB'
+

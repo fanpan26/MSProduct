@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/People/Controller/MSPeopleController.m"
-            timestampString = "476604716.907147"
+            timestampString = "476632427.702785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -454,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Common/Base/View/Cell/MSScrollImageCell.m"
-            timestampString = "476605021.776235"
+            timestampString = "476633442.715451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-setScrollImages:"
             landmarkType = "5">
          </BreakpointContent>
@@ -476,6 +476,22 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "-getListUser:cvnumber:success:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MSProduct/Classes/Common/Base/View/Cell/MSScrollImageCell.m"
+            timestampString = "476633442.715451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "+scrollHeight"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

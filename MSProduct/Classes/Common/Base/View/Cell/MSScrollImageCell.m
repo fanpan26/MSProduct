@@ -10,8 +10,12 @@
 #import "MSFrameConfig.h"
 #import "MSDisplayUser.h"
 
-@interface MSScrollImageCell()<UIScrollViewDelegate>{
+#define kImageScrollImageHeight 150.0
+#define kImageSearchBarHeight 44.0
+
+@interface MSScrollImageCell()<UIScrollViewDelegate,UISearchBarDelegate>{
     UIScrollView *_scrollView;
+    UISearchBar *_searchBar;
     UIPageControl *_pageControl;
     NSTimer *_timer;//计时器
 }
@@ -112,7 +116,8 @@
 
 +(CGFloat)scrollHeight
 {
-    return kImageScrollImageHeight;
+    CGFloat f = kImageScrollImageHeight;
+    return f;
 }
 /**
  *  重写set方法
@@ -145,6 +150,7 @@
     frame.size.height = kImageScrollImageHeight;
     [super setFrame:frame];
 }
+
 
 
 @end
