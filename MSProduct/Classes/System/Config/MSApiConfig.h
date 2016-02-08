@@ -29,3 +29,11 @@
  cvnumber 用户的cvnumber
  */
 #define kMSApiURLGetUserInfo @"/user/info"
+/*
+  获取事情列表
+ ?startId=0
+ type=1
+ cvnumber=131742
+ pid=0
+ */
+#define kMSApiURLGetThingList @"/thing/list"

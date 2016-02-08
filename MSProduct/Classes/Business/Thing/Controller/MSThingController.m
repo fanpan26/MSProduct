@@ -7,6 +7,7 @@
 //
 
 #import "MSThingController.h"
+#import "MSUserData.h"
 
 @implementation MSThingController
 
@@ -14,6 +15,9 @@
 {
     [super viewDidLoad];
     self.title = @"有事";
+    [[MSUserData alloc] getListThing:0 type:1 cv:131742 success:^(MSPeopleResult *people) {
+        
+    }];
 }
 
 

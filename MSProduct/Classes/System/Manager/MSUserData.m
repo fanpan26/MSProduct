@@ -52,4 +52,13 @@
     }];
 }
 
+-(void)getListThing:(NSInteger)startid type:(NSInteger)type cv:(NSInteger)cvnumber success:( MSPeopleResultCallBack)success
+{
+    [[MSDataFactory sharedMSDataFactory] getWithURL:kMSApiURLGetThingList params:@{@"startid":@(startid),@"type":@(type),@"cvnumber":@(cvnumber)} success:^(id JSON) {
+        NSLog(@"%@",JSON);
+    } failure:^(id ERRMSG) {
+        
+    }];
+}
+
 @end

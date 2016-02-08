@@ -20,4 +20,10 @@ typedef void(^MSPeopleResultCallBack)(MSPeopleResult *people);
 -(void)getUserInfo:(NSInteger)cvnumber success:(MSUserCardResult)success;
 
 -(void)getListUser:(NSInteger)startCv cvnumber:(NSInteger)cvnumber success:(MSPeopleResultCallBack)success;
+/*
+ ?startId=0
+ type=1
+ cvnumber=131742
+ */
+-(void)getListThing:(NSInteger)startid type:(NSInteger)type cv:(NSInteger)cvnumber success:(MSPeopleResultCallBack)success;
 @end
