@@ -12,6 +12,12 @@
 
 #endif /* MSframeConfig_h */
 
+/*屏幕宽高*/
+#define kMSScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
+#define kMSScreenHeight [UIScreen mainScreen].bounds.size.height
+
 /*表格之间的间距*/
 #define kMSTableViewCellMargin 10
 /*表格距离左侧的间距*/
@@ -31,3 +37,9 @@
 #define kMSFont(f) [UIFont systemFontOfSize:(f)]
 /*默认字体*/
 #define kMSFontDefault kMSFont(15)
+
+/*人物列表相关*/
+#define kMSPeopleUserNameFont kMSFont(15)
+#define kMSPeopleUserCompanyPositionFont kMSFont(13)
+#define kMSPeopleUserIdentityTitleFont kMSFont(13)
+#define kMSPeopleUserSummaryFont kMSFont(15)

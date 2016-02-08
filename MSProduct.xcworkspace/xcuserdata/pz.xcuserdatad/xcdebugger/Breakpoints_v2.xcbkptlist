@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/Me/Controller/MSMeController.m"
-            timestampString = "476503992.813408"
+            timestampString = "476600806.355966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "@implementation MSMeController"
             landmarkType = "3">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/People/Controller/MSPeopleController.m"
-            timestampString = "476503995.999747"
+            timestampString = "476596641.868769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/Business/Me/Controller/MSMeController.m"
-            timestampString = "476504064.696589"
+            timestampString = "476600806.355966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -214,7 +214,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MSProduct/Classes/System/Manager/MSDataFactory.m"
@@ -225,6 +225,53 @@
             endingLineNumber = "32"
             landmarkName = "-getWithURL:params:success:failure:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_28"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSDataFactory.m"
+                  timestampString = "476591622.979627"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_29"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSDataFactory.m"
+                  timestampString = "476591622.979849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[MSDataFactory getWithURL:params:success:failure:]_block_invoke32"
+                  moduleName = "MSProduct"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pz/Desktop/MSProduct/MSProduct/Classes/System/Manager/MSDataFactory.m"
+                  timestampString = "476591622.980064"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

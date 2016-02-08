@@ -8,13 +8,17 @@
 
 #import "MSPeopleCell.h"
 #import "UIImage+MS.h"
+#import "MSListUser.h"
+#import "MSPhotoView.h"
+#import "MSFrameConfig.h"
+
 
 #define kMSPeopleCellID  @"MS_PEOPLE_CELL"
 
 @interface MSPeopleCell()
 {
     //人物头像
-    UIImageView *_userPhoto;
+    MSPhotoView *_userPhoto;
     //人物姓名
     UILabel *_userName;
     //人物公司职位
@@ -59,26 +63,53 @@
 -(void)addAllSubViews
 {
     //人物头像
-    UIImageView *photo = [[UIImageView alloc] init];
+    MSPhotoView *photo = [[MSPhotoView alloc] initWithPhoto:nil size:MSPhotoViewSizeDefault];
+    [photo setPhotoType:MSPhotoViewTypeRound];
     [self.contentView addSubview:photo];
     _userPhoto = photo;
     //人物姓名
     UILabel *userName = [[UILabel alloc] init];
+    userName.font = kMSPeopleUserNameFont;
     [self.contentView addSubview:userName];
     _userName = userName;
     //人物公司职位
     UILabel *userCompanyPosition = [[UILabel alloc] init];
+    userCompanyPosition.font = kMSPeopleUserCompanyPositionFont;
     [self.contentView addSubview:userCompanyPosition];
     _userCompanyPosition = userCompanyPosition;
     //人物身份标识
     UILabel *userIdentityTitle = [[UILabel alloc] init];
+    userIdentityTitle.font = kMSPeopleUserIdentityTitleFont;
     [self.contentView addSubview:userIdentityTitle];
     _userIdentityTitle = userIdentityTitle;
     //人物概述
     UILabel *userSummary = [[UILabel alloc] init];
+    userSummary.font = kMSPeopleUserSummaryFont;
     userSummary.numberOfLines = 0;
     [self.contentView addSubview:userSummary];
     _userSummary = userSummary;
+}
+
+-(void)setCellFrame:(MSPeopleCellFrame *)cellFrame
+{
+    _cellFrame = cellFrame;
+    MSListUser *listUser = cellFrame.user;
+    [_userPhoto setImage:listUser.headphoto];
+    _userPhoto.frame = cellFrame.fUserPhoto;
+    
+    _userName.frame = cellFrame.fUserName;
+    _userName.text = listUser.name;
+    
+    _userCompanyPosition.frame = cellFrame.fCompanyPosition;
+    _userCompanyPosition.text = listUser.companyposition;
+    
+    _userIdentityTitle.frame = cellFrame.fIdentityTitle;
+    _userIdentityTitle.text = listUser.title3string;
+    
+    _userSummary.frame = cellFrame.fUserSummary;
+    _userSummary.text = listUser.summary;
+    
+    
 }
 
 @end

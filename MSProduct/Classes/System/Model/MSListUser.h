@@ -34,5 +34,10 @@
 @property(nonatomic,copy) NSString *title2string;
 @property(nonatomic,copy) NSString *title3string;
 
+@property(nonatomic,copy,readonly) NSString *companyposition;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict;
+
++(NSArray *)listUsers:(NSArray *)dicts;
 
 @end

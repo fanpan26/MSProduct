@@ -7,10 +7,13 @@
 //
 
 #import "MSBaseCell.h"
+#import "MSPeopleCellFrame.h"
 
 @interface MSPeopleCell : MSBaseCell
 
 @property(nonatomic,strong) NSIndexPath *indexPath;
 @property(nonatomic,weak)UITableView *myTableView;
 
+
+@property(nonatomic,strong) MSPeopleCellFrame *cellFrame;
 @end

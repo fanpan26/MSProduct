@@ -8,12 +8,15 @@
 
 #import "MSUserData.h"
 #import "MSUserCard.h"
+#import "MSListUser.h"
+#import "MSDisplayUser.h"
+#import "MSPeopleResult.h"
 
 @implementation MSUserData
 
 -(void)getUserInfo:(NSInteger)cvnumber success:(MSUserCardResult)success
 {
-    [[[MSDataFactory alloc]init] getWithURL:kMSApiURLGetUserInfo params:@{@"cvnumber":@(cvnumber)} success:^(id JSON) {
+    [[MSDataFactory sharedMSDataFactory] getWithURL:kMSApiURLGetUserInfo params:@{@"cvnumber":@(cvnumber)} success:^(id JSON) {
         if (success) {
             
             NSDictionary *dict = JSON[@"info"][0];
@@ -28,5 +31,25 @@
     }];
 }
 
+-(void)getListUser:(NSInteger)startCv cvnumber:(NSInteger)cvnumber success:(MSPeopleResultCallBack)success{
+    [[MSDataFactory sharedMSDataFactory] getWithURL:kMSApiURLGetFigureList params:@{@"startcv":@(startCv),@"cvnumber":@(cvnumber)} success:^(id JSON) {
+        
+        MSPeopleResult *result = [[MSPeopleResult alloc] init];
+        NSArray *listUser = [MSListUser listUsers:JSON[@"list"]];
+        NSArray *displayUser = [MSDisplayUser displayUsers:JSON[@"view"]];
+        result.listUsers = listUser;
+        result.displayUsers = displayUser;
+        if (success) {
+            success(result);
+        }
+        
+    } failure:^(id ERRMSG) {
+        MSPeopleResult *result = [[MSPeopleResult alloc] init];
+        result.hasdata = NO;
+        if(success){
+            success(result);
+        }
+    }];
+}
 
 @end

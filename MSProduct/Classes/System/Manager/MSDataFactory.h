@@ -10,8 +10,11 @@
 #import <Foundation/Foundation.h>
 #import "MSHttpManager.h"
 #import "MSApiConfig.h"
+#import "MSSingleton.h"
 
 @interface MSDataFactory : NSObject
+
+single_interface(MSDataFactory)
 
 -(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure;
 

@@ -25,6 +25,11 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+   
+}
+
+-(void)buildUI
+{
     self.title = @"记忆";
 }
 

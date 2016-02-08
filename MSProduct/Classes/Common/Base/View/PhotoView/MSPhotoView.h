@@ -39,4 +39,5 @@ typedef  NS_ENUM(NSInteger,MSPhotoViewType){
 
 -(instancetype) initWithPhoto:(NSString *)image size:(MSPhotoViewSize)size;
 
++(CGSize)photoSizeWithSize:(MSPhotoViewSize)size;
 @end

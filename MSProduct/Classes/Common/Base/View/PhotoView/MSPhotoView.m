@@ -162,4 +162,30 @@
     frame.size.height = height;
     [super setFrame:frame];
 }
+
++(CGSize)photoSizeWithSize:(MSPhotoViewSize)size
+{
+    CGFloat width = 0.0f;
+    CGFloat height = 0.0f;
+    switch (size) {
+        case MSPhotoViewSizeBig:
+            width = kMSBigWidth;
+            height = kMSBigHeight;
+            break;
+        case MSPhotoViewSizeDefault:
+            width = kMSDefaultWidth;
+            height = kMSDefaultHeight;
+            break;
+        case MSPhotoViewSizeNone:
+            width = kMSDefaultWidth;
+            height = kMSDefaultHeight;
+            break;
+        case MSPhotoViewSizeSmall:
+            width = kMSSmallWidth;
+            height = kMSSmallHeight;
+            break;
+    }
+
+    return  CGSizeMake(width , height);
+}
 @end

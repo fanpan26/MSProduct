@@ -16,6 +16,8 @@ static NSString *const MSRequestSuccessResultCodeForData = @"data";
 
 @implementation MSDataFactory
 
+single_implementation(MSDataFactory)
+
 -(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
 {
     NSString *platUrl = kMSSysURL;//平台url  gurucv、ruc等

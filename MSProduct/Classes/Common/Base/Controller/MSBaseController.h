@@ -10,4 +10,6 @@
 
 @interface MSBaseController : UIViewController
 
+-(void)buildUI;
+
 @end
