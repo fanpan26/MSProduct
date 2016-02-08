@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C7FB16E1C683BD3002E2FFA /* NSString+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB16D1C683BD3002E2FFA /* NSString+MS.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FB1711C685135002E2FFA /* MSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB1701C685135002E2FFA /* MSTool.m */; settings = {ASSET_TAGS = (); }; };
+		2C7FB1741C686650002E2FFA /* MSScrollImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB1731C686650002E2FFA /* MSScrollImageCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FEB6E1C63444100183315 /* MSMemoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB6D1C63444100183315 /* MSMemoryController.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FEB711C63445400183315 /* MSPeopleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB701C63445400183315 /* MSPeopleController.m */; settings = {ASSET_TAGS = (); }; };
 		2C7FEB741C63446500183315 /* MSSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FEB731C63446500183315 /* MSSettingController.m */; settings = {ASSET_TAGS = (); }; };
@@ -537,6 +538,8 @@
 		2C7FB16D1C683BD3002E2FFA /* NSString+MS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MS.m"; sourceTree = "<group>"; };
 		2C7FB16F1C685135002E2FFA /* MSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTool.h; sourceTree = "<group>"; };
 		2C7FB1701C685135002E2FFA /* MSTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTool.m; sourceTree = "<group>"; };
+		2C7FB1721C686650002E2FFA /* MSScrollImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSScrollImageCell.h; sourceTree = "<group>"; };
+		2C7FB1731C686650002E2FFA /* MSScrollImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSScrollImageCell.m; sourceTree = "<group>"; };
 		2C7FEB6C1C63444100183315 /* MSMemoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMemoryController.h; sourceTree = "<group>"; };
 		2C7FEB6D1C63444100183315 /* MSMemoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMemoryController.m; sourceTree = "<group>"; };
 		2C7FEB6F1C63445400183315 /* MSPeopleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSPeopleController.h; sourceTree = "<group>"; };
@@ -1153,6 +1156,8 @@
 			children = (
 				2C7FEB861C636EC000183315 /* MSBaseCell.h */,
 				2C7FEB871C636EC000183315 /* MSBaseCell.m */,
+				2C7FB1721C686650002E2FFA /* MSScrollImageCell.h */,
+				2C7FB1731C686650002E2FFA /* MSScrollImageCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -4007,6 +4012,7 @@
 				2C7FEB7E1C63535B00183315 /* UIColor+MS.m in Sources */,
 				2C7FEB8E1C63708700183315 /* UIImage+MS.m in Sources */,
 				2C7FEB941C63710900183315 /* MSPeopleCell.m in Sources */,
+				2C7FB1741C686650002E2FFA /* MSScrollImageCell.m in Sources */,
 				2C7FEB771C6344A000183315 /* MSThingController.m in Sources */,
 				2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */,
 				2CA33EB81C644CF200D0DA03 /* MSDisplayUser.m in Sources */,

@@ -13,6 +13,7 @@
 #import "MSPeopleCell.h"
 #import "MSListUser.h"
 #import "MSDisplayUser.h"
+#import "MSScrollImageCell.h"
 
 @interface MSPeopleController()
 {
@@ -54,6 +55,8 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
             f.user = listUser;
             [arrayListUsers addObject:f];
         }];
+        
+        arrayDisplayUsers = [NSMutableArray arrayWithArray:people.displayUsers];
         //刷新表格
         [self.tableView reloadData];
     }];
@@ -62,7 +65,7 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        return 44;
+        return [MSScrollImageCell scrollHeight];
     }
     MSPeopleCellFrame *f = arrayListUsers[indexPath.row];
     return f.cellHeight;
@@ -71,7 +74,9 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section ==0) {
-        return [UITableViewCell new];
+        MSScrollImageCell *scrollCell = [[MSScrollImageCell alloc] init];
+        scrollCell.scrollImages = arrayDisplayUsers;
+        return scrollCell;
     }
     MSPeopleCell *listCell = [tableView dequeueReusableCellWithIdentifier:kMSPeopleListCellID];
     listCell.indexPath = indexPath;

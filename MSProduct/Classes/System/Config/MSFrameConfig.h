@@ -40,6 +40,11 @@
 
 /*人物列表相关*/
 #define kMSPeopleUserNameFont kMSFont(15)
-#define kMSPeopleUserCompanyPositionFont kMSFont(13)
+#define kMSPeopleUserCompanyPositionFont kMSFont(12)
 #define kMSPeopleUserIdentityTitleFont kMSFont(13)
 #define kMSPeopleUserSummaryFont kMSFont(15)
+
+#define kMSPeopleUserNameColor KMSColor(52,52,52)
+#define kMSpeopleUserIdentityTitleColor kMSColor(149,149,149)
+#define kMSPeopleUserCompanyPositionColor kMSpeopleUserIdentityTitleColor
+#define kMSpeopleSummaryColor kMSpeopleUserIdentityTitleColor

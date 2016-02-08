@@ -70,21 +70,28 @@
     //人物姓名
     UILabel *userName = [[UILabel alloc] init];
     userName.font = kMSPeopleUserNameFont;
+    userName.textColor = kMSColor(52, 52, 52);
     [self.contentView addSubview:userName];
     _userName = userName;
     //人物公司职位
+    
+    UIColor *defaultColor = kMSColor(149, 149, 149);
+    
     UILabel *userCompanyPosition = [[UILabel alloc] init];
     userCompanyPosition.font = kMSPeopleUserCompanyPositionFont;
+    userCompanyPosition.textColor = defaultColor;
     [self.contentView addSubview:userCompanyPosition];
     _userCompanyPosition = userCompanyPosition;
     //人物身份标识
     UILabel *userIdentityTitle = [[UILabel alloc] init];
     userIdentityTitle.font = kMSPeopleUserIdentityTitleFont;
+    userIdentityTitle.textColor = defaultColor;
     [self.contentView addSubview:userIdentityTitle];
     _userIdentityTitle = userIdentityTitle;
     //人物概述
     UILabel *userSummary = [[UILabel alloc] init];
     userSummary.font = kMSPeopleUserSummaryFont;
+    userSummary.textColor = defaultColor;
     userSummary.numberOfLines = 0;
     [self.contentView addSubview:userSummary];
     _userSummary = userSummary;
