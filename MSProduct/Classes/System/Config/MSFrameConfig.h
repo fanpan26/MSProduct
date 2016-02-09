@@ -12,6 +12,8 @@
 
 #endif /* MSframeConfig_h */
 
+#define WS(weakSelf) __weak __typeof(&*self)weakSelf = self;
+
 /*屏幕宽高*/
 #define kMSScreenWidth [UIScreen mainScreen].bounds.size.width
 
@@ -48,3 +50,7 @@
 #define kMSpeopleUserIdentityTitleColor kMSColor(149,149,149)
 #define kMSPeopleUserCompanyPositionColor kMSpeopleUserIdentityTitleColor
 #define kMSpeopleSummaryColor kMSpeopleUserIdentityTitleColor
+
+/*事情列表*/
+#define kMSThingTableViewBackGroundColor kMSColor(236,236,236)
+#define kMSThingArticleLabelFont kMSFont(12)

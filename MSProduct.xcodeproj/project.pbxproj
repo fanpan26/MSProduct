@@ -27,6 +27,14 @@
 		2C84F9391C671D860029BE6C /* MSPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C84F9381C671D860029BE6C /* MSPhotoView.m */; };
 		2C8BAC341C6797A10030E0F4 /* MSPeopleResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8BAC331C6797A10030E0F4 /* MSPeopleResult.m */; };
 		2C8BAC371C67A1710030E0F4 /* MSBaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8BAC361C67A1710030E0F4 /* MSBaseResult.m */; };
+		2C95A3181C69C3AE00134BC3 /* MSListThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A3171C69C3AE00134BC3 /* MSListThing.m */; };
+		2C95A31B1C69CAB600134BC3 /* MSThingResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A31A1C69CAB600134BC3 /* MSThingResult.m */; };
+		2C95A31E1C69CE6B00134BC3 /* MSThingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A31D1C69CE6B00134BC3 /* MSThingCell.m */; };
+		2C95A3211C69CFCD00134BC3 /* MSThingBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A3201C69CFCD00134BC3 /* MSThingBottomBar.m */; };
+		2C95A3241C69D37900134BC3 /* MSThingCellFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A3231C69D37900134BC3 /* MSThingCellFrame.m */; };
+		2C95A3271C69F9AB00134BC3 /* common_card_heng.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95A3251C69F9AB00134BC3 /* common_card_heng.png */; };
+		2C95A3281C69F9AB00134BC3 /* common_card_heng@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C95A3261C69F9AB00134BC3 /* common_card_heng@2x.png */; };
+		2C95A32F1C69FB6400134BC3 /* MSSingleLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C95A32E1C69FB6400134BC3 /* MSSingleLine.m */; };
 		2C98C4591C640F6B001510C0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C44E1C640F6B001510C0 /* Contents.json */; };
 		2C98C45A1C640F6B001510C0 /* tab_buddy_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C44F1C640F6B001510C0 /* tab_buddy_nor@2x.png */; };
 		2C98C45B1C640F6B001510C0 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C98C4511C640F6B001510C0 /* Contents.json */; };
@@ -521,6 +529,7 @@
 		2CE41C9F1C62386C00CC617F /* visitordiscover_image_profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE41ACC1C62386C00CC617F /* visitordiscover_image_profile@2x.png */; };
 		2CE41CA01C62386C00CC617F /* visitordiscover_image_profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE41ACD1C62386C00CC617F /* visitordiscover_image_profile@3x.png */; };
 		2CE41CA71C62398D00CC617F /* MSSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE41CA61C62398D00CC617F /* MSSystem.m */; };
+		2CF492091C6A32F100EC690F /* MSLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF492081C6A32F100EC690F /* MSLoadingView.m */; };
 		56F366ABE7FADF441C9E9841 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9A4EDBAC7F36F4A4A5A6E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -565,6 +574,20 @@
 		2C8BAC331C6797A10030E0F4 /* MSPeopleResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSPeopleResult.m; sourceTree = "<group>"; };
 		2C8BAC351C67A1710030E0F4 /* MSBaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBaseResult.h; sourceTree = "<group>"; };
 		2C8BAC361C67A1710030E0F4 /* MSBaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSBaseResult.m; sourceTree = "<group>"; };
+		2C95A3161C69C3AE00134BC3 /* MSListThing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSListThing.h; sourceTree = "<group>"; };
+		2C95A3171C69C3AE00134BC3 /* MSListThing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSListThing.m; sourceTree = "<group>"; };
+		2C95A3191C69CAB600134BC3 /* MSThingResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSThingResult.h; sourceTree = "<group>"; };
+		2C95A31A1C69CAB600134BC3 /* MSThingResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSThingResult.m; sourceTree = "<group>"; };
+		2C95A31C1C69CE6B00134BC3 /* MSThingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSThingCell.h; sourceTree = "<group>"; };
+		2C95A31D1C69CE6B00134BC3 /* MSThingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSThingCell.m; sourceTree = "<group>"; };
+		2C95A31F1C69CFCD00134BC3 /* MSThingBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSThingBottomBar.h; sourceTree = "<group>"; };
+		2C95A3201C69CFCD00134BC3 /* MSThingBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSThingBottomBar.m; sourceTree = "<group>"; };
+		2C95A3221C69D37900134BC3 /* MSThingCellFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSThingCellFrame.h; sourceTree = "<group>"; };
+		2C95A3231C69D37900134BC3 /* MSThingCellFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSThingCellFrame.m; sourceTree = "<group>"; };
+		2C95A3251C69F9AB00134BC3 /* common_card_heng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_card_heng.png; sourceTree = "<group>"; };
+		2C95A3261C69F9AB00134BC3 /* common_card_heng@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_card_heng@2x.png"; sourceTree = "<group>"; };
+		2C95A32D1C69FB6400134BC3 /* MSSingleLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSingleLine.h; sourceTree = "<group>"; };
+		2C95A32E1C69FB6400134BC3 /* MSSingleLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSingleLine.m; sourceTree = "<group>"; };
 		2C98C44E1C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		2C98C44F1C640F6B001510C0 /* tab_buddy_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_buddy_nor@2x.png"; sourceTree = "<group>"; };
 		2C98C4511C640F6B001510C0 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -1083,6 +1106,8 @@
 		2CE41CA51C62398D00CC617F /* MSSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSystem.h; sourceTree = "<group>"; };
 		2CE41CA61C62398D00CC617F /* MSSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSystem.m; sourceTree = "<group>"; };
 		2CE41CA81C623AA600CC617F /* ReadMe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadMe.h; sourceTree = "<group>"; };
+		2CF492071C6A32F100EC690F /* MSLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSLoadingView.h; sourceTree = "<group>"; };
+		2CF492081C6A32F100EC690F /* MSLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSLoadingView.m; sourceTree = "<group>"; };
 		6C8D0BB24CCB8BD5968B81F9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7E9A4EDBAC7F36F4A4A5A6E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBED55744F00AB12A4EED914 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -1154,6 +1179,15 @@
 				2C84F9381C671D860029BE6C /* MSPhotoView.m */,
 			);
 			path = PhotoView;
+			sourceTree = "<group>";
+		};
+		2C95A32C1C69FB4A00134BC3 /* SingleLine */ = {
+			isa = PBXGroup;
+			children = (
+				2C95A32D1C69FB6400134BC3 /* MSSingleLine.h */,
+				2C95A32E1C69FB6400134BC3 /* MSSingleLine.m */,
+			);
+			path = SingleLine;
 			sourceTree = "<group>";
 		};
 		2C98C44C1C640F6B001510C0 /* Tab */ = {
@@ -1479,6 +1513,12 @@
 		2CE418391C62314A00CC617F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C95A3161C69C3AE00134BC3 /* MSListThing.h */,
+				2C95A3171C69C3AE00134BC3 /* MSListThing.m */,
+				2C95A3191C69CAB600134BC3 /* MSThingResult.h */,
+				2C95A31A1C69CAB600134BC3 /* MSThingResult.m */,
+				2C95A3221C69D37900134BC3 /* MSThingCellFrame.h */,
+				2C95A3231C69D37900134BC3 /* MSThingCellFrame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1486,6 +1526,10 @@
 		2CE4183A1C62314A00CC617F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C95A31C1C69CE6B00134BC3 /* MSThingCell.h */,
+				2C95A31D1C69CE6B00134BC3 /* MSThingCell.m */,
+				2C95A31F1C69CFCD00134BC3 /* MSThingBottomBar.h */,
+				2C95A3201C69CFCD00134BC3 /* MSThingBottomBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1581,6 +1625,8 @@
 		2CE418461C62331900CC617F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2CF492061C6A32E000EC690F /* LoadingView */,
+				2C95A32C1C69FB4A00134BC3 /* SingleLine */,
 				2C84F9361C671D710029BE6C /* PhotoView */,
 				2C7FEB851C636E9300183315 /* Cell */,
 			);
@@ -1753,6 +1799,8 @@
 		2CE418861C62386C00CC617F /* CommonCard */ = {
 			isa = PBXGroup;
 			children = (
+				2C95A3251C69F9AB00134BC3 /* common_card_heng.png */,
+				2C95A3261C69F9AB00134BC3 /* common_card_heng@2x.png */,
 				2CE418871C62386C00CC617F /* common_card_background.imageset */,
 				2CE4188B1C62386C00CC617F /* common_card_background.png */,
 				2CE4188C1C62386C00CC617F /* common_card_background@2x.png */,
@@ -3315,6 +3363,15 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		2CF492061C6A32E000EC690F /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				2CF492071C6A32F100EC690F /* MSLoadingView.h */,
+				2CF492081C6A32F100EC690F /* MSLoadingView.m */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		3EBA1780FA72CB98C7D9DEEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -3408,6 +3465,7 @@
 				2CE41B621C62386C00CC617F /* Contents.json in Resources */,
 				2CE41C991C62386C00CC617F /* Contents.json in Resources */,
 				2CE41B1F1C62386C00CC617F /* Contents.json in Resources */,
+				2C95A3271C69F9AB00134BC3 /* common_card_heng.png in Resources */,
 				2CE41B201C62386C00CC617F /* Default-568h@2x.png in Resources */,
 				2CE41C871C62386C00CC617F /* Contents.json in Resources */,
 				2CE41C931C62386C00CC617F /* Contents.json in Resources */,
@@ -3759,6 +3817,7 @@
 				2CE41AD01C62386C00CC617F /* Contents.json in Resources */,
 				2CB1FC6E1C674DCE00A52129 /* Default-568h@2x.png in Resources */,
 				2CE41BC21C62386C00CC617F /* Contents.json in Resources */,
+				2C95A3281C69F9AB00134BC3 /* common_card_heng@2x.png in Resources */,
 				2CE41C791C62386C00CC617F /* tabbar_message_center@3x.png in Resources */,
 				2CE41B7C1C62386C00CC617F /* statusdetail_tooltip@2x.png in Resources */,
 				2CE41C451C62386C00CC617F /* new_feature_share_true@2x.png in Resources */,
@@ -3928,14 +3987,19 @@
 				2C7FEB741C63446500183315 /* MSSettingController.m in Sources */,
 				2C98C4651C64144F001510C0 /* MSHttpManager.m in Sources */,
 				2C7FEB7E1C63535B00183315 /* UIColor+MS.m in Sources */,
+				2CF492091C6A32F100EC690F /* MSLoadingView.m in Sources */,
 				2C7FEB8E1C63708700183315 /* UIImage+MS.m in Sources */,
 				2C7FEB941C63710900183315 /* MSPeopleCell.m in Sources */,
 				2C7FB1741C686650002E2FFA /* MSScrollImageCell.m in Sources */,
 				2C7FEB771C6344A000183315 /* MSThingController.m in Sources */,
 				2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */,
+				2C95A31E1C69CE6B00134BC3 /* MSThingCell.m in Sources */,
 				2CA33EB81C644CF200D0DA03 /* MSDisplayUser.m in Sources */,
+				2C95A3241C69D37900134BC3 /* MSThingCellFrame.m in Sources */,
 				2CA33EC21C645EF500D0DA03 /* MSUserCard.m in Sources */,
 				2C84F9391C671D860029BE6C /* MSPhotoView.m in Sources */,
+				2C95A31B1C69CAB600134BC3 /* MSThingResult.m in Sources */,
+				2C95A3211C69CFCD00134BC3 /* MSThingBottomBar.m in Sources */,
 				2CA33EB51C644C3A00D0DA03 /* MSBaseUser.m in Sources */,
 				2C8BAC341C6797A10030E0F4 /* MSPeopleResult.m in Sources */,
 				2CE41CA71C62398D00CC617F /* MSSystem.m in Sources */,
@@ -3947,8 +4011,10 @@
 				2C7FEB8B1C636FC700183315 /* UIImageView+MS.m in Sources */,
 				2C7FEB6E1C63444100183315 /* MSMemoryController.m in Sources */,
 				2CDB91851C6228C1003A631F /* main.m in Sources */,
+				2C95A3181C69C3AE00134BC3 /* MSListThing.m in Sources */,
 				2CE418551C62367100CC617F /* MSTabBarController.m in Sources */,
 				2C0D27281C68D44000618AE4 /* MSSearchBar.m in Sources */,
+				2C95A32F1C69FB6400134BC3 /* MSSingleLine.m in Sources */,
 				2C7FEB881C636EC000183315 /* MSBaseCell.m in Sources */,
 				2CE418521C62365100CC617F /* MSNavigationController.m in Sources */,
 				2CA33EC51C647F2A00D0DA03 /* MSUserData.m in Sources */,

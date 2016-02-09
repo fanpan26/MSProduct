@@ -14,5 +14,7 @@
     UIImageView *_selectedBg;//选中背景图
 }
 
+-(UILabel *)addSingleLineLabel;
+
 -(void)addAllSubViews;
 @end

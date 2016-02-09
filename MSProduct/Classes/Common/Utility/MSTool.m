@@ -31,4 +31,15 @@ single_implementation(MSTool);
         return html;
 }
 
+
+-(NSString *)handleNULL:(id)string
+{
+    return [string isKindOfClass:[NSNull class]]||string == nil ? @"" : string;
+}
+
+-(NSString *)transDateFromInt:(NSInteger)strtime
+{
+   return @"2016-01-01 12:05:46";
+}
+
 @end

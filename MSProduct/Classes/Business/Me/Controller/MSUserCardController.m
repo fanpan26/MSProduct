@@ -12,9 +12,7 @@
 #import "MSPhotoView.h"
 #import "MSSystem.h"
 
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
-#define kScreenW        [UIScreen mainScreen].bounds.size.width
-#define kScreenH        [UIScreen mainScreen].bounds.size.height
+
 
 @implementation MSUserCardInfo
 
@@ -268,7 +266,7 @@ typedef NS_ENUM(NSInteger, MSUserCardCellType) {
 
 //section headerview
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 44)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kMSScreenWidth, 44)];
     title.backgroundColor = kMSColor(236, 236, 236);
     title.textColor = [UIColor grayColor];
     switch (section) {

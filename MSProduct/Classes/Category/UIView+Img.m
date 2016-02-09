@@ -7,13 +7,14 @@
 //
 
 #import "UIView+Img.h"
+#import "UIImage+MS.h"
 
 @implementation UIView (Img)
 
 -(UIView *)initWithImage:(NSString *)image frame:(CGRect)frame
 {
     UIView *backView = [self initWithFrame:frame];
-    UIImage *imageView = [UIImage imageNamed:image];
+    UIImage *imageView = [UIImage resizeImage:image];
     backView.layer.contents = (id)imageView.CGImage;
     return backView;
 }

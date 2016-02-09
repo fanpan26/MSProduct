@@ -15,4 +15,8 @@ single_interface(MSTool)
 
 -(NSString *)filterHTML:(NSString *)string;
 
+
+-(NSString *)handleNULL:(id)string;
+
+-(NSString *)transDateFromInt:(NSInteger)time;
 @end

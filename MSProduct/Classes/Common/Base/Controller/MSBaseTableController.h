@@ -25,7 +25,7 @@
 
 -(void)startHeaderRefreshing;
 -(void)startFooterRefreshing;
-
+-(void)reloadData;
 //@property(nonatomic,copy) MSPullDownStartRefreshBlock pullDownStartRefreshBlock;
 //@property(nonatomic,copy) MSPullDownEndRefreshBlock pullDownEndRefreshBlock;
 //

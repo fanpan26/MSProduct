@@ -11,6 +11,8 @@
 #import "MSListUser.h"
 #import "MSDisplayUser.h"
 #import "MSPeopleResult.h"
+#import "MSListThing.h"
+#import "MSThingResult.h"
 
 @implementation MSUserData
 
@@ -46,18 +48,29 @@
     } failure:^(id ERRMSG) {
         MSPeopleResult *result = [[MSPeopleResult alloc] init];
         result.hasdata = NO;
+        result.errmsg = ERRMSG;
         if(success){
             success(result);
         }
     }];
 }
 
--(void)getListThing:(NSInteger)startid type:(NSInteger)type cv:(NSInteger)cvnumber success:( MSPeopleResultCallBack)success
+-(void)getListThing:(NSInteger)startid type:(NSInteger)type cv:(NSInteger)cvnumber success:( MSThingResultCallBack)success
 {
     [[MSDataFactory sharedMSDataFactory] getWithURL:kMSApiURLGetThingList params:@{@"startid":@(startid),@"type":@(type),@"cvnumber":@(cvnumber)} success:^(id JSON) {
-        NSLog(@"%@",JSON);
+        NSArray *thingArray = JSON[@"list"];
+        MSThingResult *result = [[MSThingResult alloc] init];
+        result.listThings =[NSArray arrayWithArray: [MSListThing listThings:thingArray]];
+        if (success) {
+            success(result);
+        }
     } failure:^(id ERRMSG) {
-        
+        MSThingResult *result = [[MSThingResult alloc] init];
+        result.hasdata = NO;
+        result.errmsg = ERRMSG;
+        if(success) {
+            success(result);
+        }
     }];
 }
 

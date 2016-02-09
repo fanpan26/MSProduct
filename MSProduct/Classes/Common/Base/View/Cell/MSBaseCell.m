@@ -41,4 +41,11 @@
     
 }
 
+
+-(UILabel *)addSingleLineLabel
+{
+    UILabel *label = [[UILabel alloc] init];
+    [self.contentView addSubview:label];
+    return label;
+}
 @end

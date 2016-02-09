@@ -8,6 +8,7 @@
 
 #import "MSBaseTableController.h"
 #import  "MJRefresh.h"
+#import "MSFrameConfig.h"
 
 
 @implementation MSBaseTableController
@@ -28,6 +29,7 @@
     //开始下拉刷新
     NSLog(@"开始下拉刷新，刷新后执行endRefreshing方法");
     [self endHeaderRefreshing];
+    [self hideLoading];
 }
 /*
  上拉刷新要运行的方法，子类重写一定要调用super startHeadRefreshing
@@ -37,17 +39,28 @@
     //开始上拉刷新
     NSLog(@"开始上拉刷新，刷新后执行endRefreshing方法");
     [self endFooterRefreshing];
+    [self hideLoading];
 }
 
 -(void)endHeaderRefreshing
 {
-    __unsafe_unretained UITableView *_unretain_tableView = self.tableView;
-    [_unretain_tableView.mj_header endRefreshing];
+    if(_shoudUseRefresh){
+        __unsafe_unretained UITableView *_unretain_tableView = self.tableView;
+        [_unretain_tableView.mj_header endRefreshing];
+    }
 }
 -(void)endFooterRefreshing
 {
-    __unsafe_unretained UITableView *_unretain_tableView = self.tableView;
-    [_unretain_tableView.mj_footer endRefreshing];
+    if (_shoudUseRefresh) {
+        __unsafe_unretained UITableView *_unretain_tableView = self.tableView;
+        [_unretain_tableView.mj_footer endRefreshing];
+    }
+}
+
+-(void)reloadData
+{
+     __unsafe_unretained UITableView *_unretain_tableView = self.tableView;
+    [_unretain_tableView reloadData];
 }
 
 -(void)viewDidLoad
@@ -57,7 +70,7 @@
     tableView.delegate  = self;
     tableView.dataSource = self;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
+    tableView.backgroundColor = kMSThingTableViewBackGroundColor;
     
     if (self.shoudUseRefresh) {
         __unsafe_unretained UITableView *_unretain_tableView = tableView;
@@ -84,7 +97,7 @@
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

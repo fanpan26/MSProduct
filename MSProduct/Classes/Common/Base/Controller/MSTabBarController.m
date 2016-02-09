@@ -39,7 +39,9 @@
     people.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"人物" image:[UIImage imageNamed:@"tabbar_profile"] tag:2];
     [childControllers addObject:people];
     //有事
-    MSNavigationController *thing = [[MSNavigationController alloc] initWithRootViewController:[[MSThingController alloc] init]];
+    MSThingController *thingChild = [[MSThingController alloc] init];
+    thingChild.shoudUseRefresh = YES;
+    MSNavigationController *thing = [[MSNavigationController alloc] initWithRootViewController:thingChild];
     thing.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"有事" image:[UIImage imageNamed:@"tabbar_discover"] tag:3];
     [childControllers addObject:thing];
     //我的

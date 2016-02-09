@@ -35,7 +35,9 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 {
     [super viewDidLoad];
     [self buildUI];
-    [self loadData:nil];
+    [self loadData:^{
+        [super startHeaderRefreshing];
+    }];
 }
 
 - (void)buildUI
@@ -50,6 +52,7 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
     [self loadData:^{
         [super startHeaderRefreshing];
     }];
+    
 }
 
 -(void)startFooterRefreshing
@@ -61,6 +64,7 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 
 -(void)loadData:(void(^)())finish
 {
+    [self showLoading];
     arrayListUsers = [NSMutableArray array];
     arrayDisplayUsers = [NSMutableArray array];
     //加载数据
@@ -134,10 +138,14 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
     listCell.indexPath = indexPath;
     listCell.myTableView = tableView;
     
-    MSPeopleCellFrame *f = arrayListUsers[indexPath.row - 1];
+    NSInteger index = indexPath.row - 1;
+    if (index > arrayListUsers.count - 1) {
+        return listCell;
+    }else{
+        MSPeopleCellFrame *f = arrayListUsers[indexPath.row - 1];
     
-    listCell.cellFrame = f;
-    
+        listCell.cellFrame = f;
+    }
     return listCell;
 }
 

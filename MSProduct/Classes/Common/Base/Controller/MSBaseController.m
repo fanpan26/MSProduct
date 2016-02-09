@@ -10,9 +10,30 @@
     基础类型的Controller
  */
 #import "MSBaseController.h"
+#import "MBProgressHUD.h"
+#import "MSLoadingView.h"
+
+@interface MSBaseController()
+{
+    MBProgressHUD *_hud;
+    MSLoadingView *_loadingView;
+}
+
+@end
 
 @implementation MSBaseController
 
+
+- (void) showLoading{
+    if (!_loadingView) {
+        _loadingView = [[MSLoadingView alloc] init];
+    }
+    [_loadingView showLoading:self.navigationController.view];
+}
+- (void)hideLoading
+{
+    [_loadingView endLoading];
+}
 
 -(instancetype)init
 {

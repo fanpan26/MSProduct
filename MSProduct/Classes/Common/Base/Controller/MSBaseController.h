@@ -12,4 +12,7 @@
 
 -(void)buildUI;
 
+-(void)showLoading;
+
+-(void)hideLoading;
 @end
