@@ -10,9 +10,11 @@
 #import "MSUserData.h"
 #import "MSUserCard.h"
 #import "MSUserCardController.h"
+#import "MSFrameConfig.h"
+#import "UIColor+MS.h"
+#import "MSSystem.h"
+#import "MSMyCellTopView.h"
 
-#define kScreenW        [UIScreen mainScreen].bounds.size.width
-#define kScreenH        [UIScreen mainScreen].bounds.size.height
 @interface MSMeController()
 
 @end
@@ -22,24 +24,36 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"我的";
-   
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    btn.backgroundColor = [UIColor redColor];
-    [btn addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    
-    UILabel *l1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, kScreenW * 0.5, 30)];
-    l1.backgroundColor = [UIColor redColor];
-    UILabel *l2 = [[UILabel alloc] initWithFrame:CGRectMake(kScreenW * 0.5, 200, kScreenW * 0.5, 30)];
-
-    l1.text = @"11121232323213232";
-    l2.text = @"123123231232132321321321321";
-    
-    [self.view addSubview:l1];
-    [self.view addSubview:l2];
+    [self buildUI];
 }
+
+-(void)buildUI
+{
+    self.title = @"我的";
+    MSMyCellTopView *topView = [[MSMyCellTopView alloc] initWithFrame:CGRectMake(0, 0, kMSScreenWidth, 0)];
+    self.tableView.tableHeaderView = topView;
+    self.tableView.backgroundColor = kMSThingTableViewBackGroundColor;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return  10;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL"];
+    cell.textLabel.text = @"11111111";
+    cell.backgroundColor = [UIColor clearColor];
+    return cell;
+}
+
 
 - (void)push
 {

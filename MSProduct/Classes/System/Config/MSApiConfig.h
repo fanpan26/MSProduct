@@ -37,3 +37,8 @@
  pid=0
  */
 #define kMSApiURLGetThingList @"/thing/list"
+
+/*
+    获取关于列表
+ */
+#define kMSApiURLGetAboutList @"/about"

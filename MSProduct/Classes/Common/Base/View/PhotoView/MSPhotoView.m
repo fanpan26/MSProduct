@@ -9,8 +9,8 @@
 #import "MSPhotoView.h"
 #import "UIImageView+MS.h"
 
-#define kMSBigWidth 100
-#define kMSBigHeight 100
+#define kMSBigWidth 80
+#define kMSBigHeight 80
 
 #define kMSSmallWidth 40
 #define kMSSmallHeight 40

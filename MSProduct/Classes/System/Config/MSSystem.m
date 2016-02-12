@@ -49,7 +49,7 @@
 +(MSPlatFormModel *)platInfo
 {
     MSPlatFormModel *plat = [[MSPlatFormModel alloc] init];
-    plat.color = @"ff3030";
+    plat.color = @"116af0";
     plat.menuTitle = @"劳人记忆";
     plat.platid = 1;
     plat.platurl = @"gurucv";

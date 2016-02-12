@@ -39,6 +39,8 @@
 #define kMSFont(f) [UIFont systemFontOfSize:(f)]
 /*默认字体*/
 #define kMSFontDefault kMSFont(15)
+/*浅灰色*/
+#define kMSSystemLightGrayColor kMSColor(149,149,149)
 
 /*人物列表相关*/
 #define kMSPeopleUserNameFont kMSFont(15)

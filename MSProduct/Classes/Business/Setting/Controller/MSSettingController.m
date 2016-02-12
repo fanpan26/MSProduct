@@ -7,43 +7,76 @@
 //
 
 #import "MSSettingController.h"
-#import "MSPhotoView.h"
+#import "MSUserData.h"
+#import "MSAboutResult.h"
+#import "MSFrameConfig.h"
+#import "MSSettingLogOutCell.h"
+#import "MSSettingNormalCell.h"
+
+@interface MSSettingController()
+{
+    NSMutableArray *arrayAboutsData;
+}
+
+@end
+
+static NSString *const kMSAboutCellID = @"MS_NORMAL_CELL";
+static NSString *const kMSLogoutCellID = @"MS_LOGOUT_CELL";
 
 @implementation MSSettingController
 
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"设置";
-    [self testPhotoView];
+    [self buildUI];
+    [self loadData];
 }
 
--(void)testPhotoView
+-(void)buildUI
 {
-    //http://img1.gurucv.com/image/2016/1/31/dea89edec0ba465d9fb10ecf6503c472.jpg
-    NSString *imgUrl = @"http://img1.gurucv.com/image/2016/1/31/dea89edec0ba465d9fb10ecf6503c472.jpg";
-    MSPhotoView *photoView = [[MSPhotoView alloc] initWithPhoto:imgUrl];
-    photoView.frame = CGRectMake(10, 100, 0, 0);
-    [self.view addSubview:photoView];
-    
-    MSPhotoView *photoView1 = [[MSPhotoView alloc] initWithPhoto:imgUrl];
-    photoView1.frame = CGRectMake(10, 200, 0, 0);
-    photoView1.photoType = MSPhotoViewTypeRound;
-    [self.view addSubview:photoView1];
-    
-    MSPhotoView *photoView2 = [[MSPhotoView alloc] initWithPhoto:imgUrl];
-    photoView2.frame = CGRectMake(10, 300, 0, 0);
-    photoView2.photoType = MSPhotoViewTypeSquareRectRound;
-    [self.view addSubview:photoView2];
-
-    
-    MSPhotoView *photoView3 = [[MSPhotoView alloc] initWithPhoto:imgUrl size:MSPhotoViewSizeBig];
-    photoView3.frame = CGRectMake(10, 400, 0, 0);
-    photoView3.photoType = MSPhotoViewTypeRoundWhite;
-    [self.view addSubview:photoView3];
-
-    
+    [super buildUI];
+    self.title = @"设置";
+    [self.tableView registerClass:[MSSettingNormalCell class] forCellReuseIdentifier:kMSAboutCellID];
+    [self.tableView registerClass:[MSSettingLogOutCell class] forCellReuseIdentifier:kMSLogoutCellID];
+    self.tableView.rowHeight = 64;
 }
 
+-(void)loadData
+{
+    [self showLoading];
+    arrayAboutsData  = [NSMutableArray array];
+    WS(aboutSelf)
+    [[MSUserData alloc] getListAbout:^(MSAboutResult *about) {
+        [arrayAboutsData addObjectsFromArray:about.abouts];
+        [aboutSelf reloadData];
+        [aboutSelf hideLoading];
+    }];
+}
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return arrayAboutsData.count + 1;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BOOL isLast = indexPath.row == arrayAboutsData.count;
+    if (isLast) {
+        MSSettingLogOutCell *cell = [tableView dequeueReusableCellWithIdentifier:kMSLogoutCellID];
+        return cell;
+    }
+    MSSettingNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:kMSAboutCellID];
+    cell.about = arrayAboutsData[indexPath.row];
+    return  cell;
+}
+
+-(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
 @end

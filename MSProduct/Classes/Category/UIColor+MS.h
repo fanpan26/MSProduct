@@ -12,4 +12,7 @@
 
 + (UIColor *)colorWithHexString: (NSString *)hexString;
 
++ (UIColor *)graduallyColor:(CGFloat)changeHeight r:(CGFloat)r g:(CGFloat)g b:(CGFloat)b;
+
++ (UIColor *)graduallyColor:(CGFloat)changeHeight hexString:(NSString *)hexString;
 @end

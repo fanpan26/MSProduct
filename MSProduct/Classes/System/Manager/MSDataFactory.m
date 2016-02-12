@@ -24,7 +24,6 @@ single_implementation(MSDataFactory)
     NSString *fullPath = [NSString stringWithFormat:@"%@%@%@",kMSBaseApiDomain,platUrl,url];
     
     MSHttpManager *manager = [MSHttpManager sharedMSHttpManager];
-    NSLog(@"%@",manager);
     [manager getWithURL:fullPath params:params success:^(id JSON) {
         
         [self handleJSON:JSON success:success failure:failure];
@@ -36,9 +35,27 @@ single_implementation(MSDataFactory)
     }];
 }
 
+-(void)getStringWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
+{
+    NSString *platUrl = kMSSysURL;//平台url  gurucv、ruc等
+    NSString *fullPath = [NSString stringWithFormat:@"%@%@%@",kMSBaseApiDomain,platUrl,url];
+    
+    MSHttpManager *manager = [MSHttpManager sharedMSHttpManager];
+    [manager getStringWithURL:fullPath params:params success:^(id JSON) {
+        
+        [self handleString:JSON success:success failure:failure];
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"请求失败:%@",error);
+        
+    }];
+}
+
 -(void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
 {
-    NSString *fullPath = [kMSBaseApiDomain stringByAppendingString:url];
+    NSString *platUrl = kMSSysURL;//平台url  gurucv、ruc等
+    NSString *fullPath = [NSString stringWithFormat:@"%@%@%@",kMSBaseApiDomain,platUrl,url];
     
     MSHttpManager *manager = [MSHttpManager sharedMSHttpManager];
     
@@ -69,5 +86,38 @@ single_implementation(MSDataFactory)
         }
     }
 
+}
+
+-(void)handleString:(id)String success:(MSRequestResultSuccessCallBack)success failure:(MSRequestResultFailureCallBack)failure
+{
+    
+    NSString *jsonString = [[NSString alloc]initWithData:String encoding:NSUTF8StringEncoding];
+    if (jsonString == nil) {
+        if (failure) {
+            failure(@"error");
+        }
+        return;
+    }
+    jsonString = [jsonString stringByReplacingOccurrencesOfString:@"\\" withString:@""].lowercaseString;
+    //去掉两遍的引号
+    NSRange range;
+    range.location = 1;
+    range.length = jsonString.length - 2;
+    jsonString  = [jsonString substringWithRange:range];
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    id result = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                   error:&err];
+    if(err) {
+        if (failure) {
+            failure(@"error");
+        }
+        return;
+    }
+    if (success) {
+        success(result);
+    }
 }
 @end

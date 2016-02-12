@@ -15,7 +15,7 @@ single_implementation(MSHttpManager)
 
 -(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
 {
-    [self requestWithType:@"GET" url:url params:params success:^(id JSON) {
+    [self requestWithType:@"GET" url:url params:params json:YES success:^(id JSON) {
         if (success) {
             success(JSON);
         }
@@ -28,7 +28,7 @@ single_implementation(MSHttpManager)
 
 -(void)postWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
 {
-    [self requestWithType:@"POST" url:url params:params success:^(id JSON) {
+    [self requestWithType:@"POST" url:url params:params json:YES success:^(id JSON) {
         if (success) {
             success(JSON);
         }
@@ -39,15 +39,35 @@ single_implementation(MSHttpManager)
     }];
 }
 
--(void)requestWithType:(NSString *)type url:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
+-(void)getStringWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
 {
+    [self requestWithType:@"GET" url:url params:params json:NO success:^(id JSON) {
+        if (success) {
+            success(JSON);
+        }
+    } failure:^(NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+-(void)requestWithType:(NSString *)type url:(NSString *)url params:(NSDictionary *)params json:(BOOL)json success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure
+{
+    if (params == nil) {
+        params = @{@"r":@"macrosage"};
+    }
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:params];
     //[dict setValue:@"other" forKey:@"other"];//添加其他公共参数
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    if (json == NO) {
+        //兼容返回非json格式的字符串
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    }
     
     if([type isEqualToString:@"GET"]){
         [manager GET:url parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"AFN return JSON:%@",responseObject);
+            NSLog(@"AFN return JSON:%@,%@",[responseObject class],responseObject);
             if (success) {
                 success(responseObject);
             }

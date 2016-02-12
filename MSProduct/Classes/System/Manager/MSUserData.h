@@ -11,11 +11,14 @@
 @class  MSUserCard;
 @class  MSPeopleResult;
 @class  MSThingResult;
+@class  MSAboutResult;
 typedef void(^MSUserCardResult)(MSUserCard *card) ;
 
 typedef void(^MSPeopleResultCallBack)(MSPeopleResult *people);
 
 typedef void(^MSThingResultCallBack)(MSThingResult *thing) ;
+
+typedef void(^MSAboutResultCallback)(MSAboutResult *about);
 
 @interface MSUserData:NSObject
 
@@ -29,4 +32,6 @@ typedef void(^MSThingResultCallBack)(MSThingResult *thing) ;
  cvnumber=131742
  */
 -(void)getListThing:(NSInteger)startid type:(NSInteger)type cv:(NSInteger)cvnumber success:(MSThingResultCallBack)success;
+
+-(void)getListAbout:(MSAboutResultCallback)success;
 @end

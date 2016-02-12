@@ -30,6 +30,15 @@ single_interface(MSHttpManager)
     failure:失败回调
  */
 -(void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure;
+
+/*
+ get方法请求数据,返回非JSON
+ url：接口路径
+ params:参数，字典类型
+ success:成功回调
+ failure:失败回调
+ */
+-(void)getStringWithURL:(NSString *)url params:(NSDictionary *)params success:(MSRequestSuccessCallBack)success failure:(MSRequestFailureCallBack)failure;
 /*
  post方法请求数据
  url：接口路径

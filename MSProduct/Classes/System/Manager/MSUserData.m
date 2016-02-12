@@ -13,6 +13,8 @@
 #import "MSPeopleResult.h"
 #import "MSListThing.h"
 #import "MSThingResult.h"
+#import "MSAbout.h"
+#import "MSAboutResult.h"
 
 @implementation MSUserData
 
@@ -69,6 +71,31 @@
         result.hasdata = NO;
         result.errmsg = ERRMSG;
         if(success) {
+            success(result);
+        }
+    }];
+}
+
+-(void)getListAbout:(MSAboutResultCallback)success
+{
+     MSAboutResult *result = [[MSAboutResult alloc] init];
+    [[MSDataFactory sharedMSDataFactory] getStringWithURL:kMSApiURLGetAboutList params:nil success:^(id JSON) {
+        NSMutableArray *arrayM = [NSMutableArray array];
+        MSAbout *pwd = [[MSAbout alloc] init];
+        pwd.title = @"修改密码";
+        MSAbout *advice = [[MSAbout alloc] init];
+        advice.title = @"反馈意见";
+        [arrayM addObject:pwd];
+        [arrayM addObject:advice];
+        [arrayM addObjectsFromArray:[MSAbout abouts:JSON]];
+        result.abouts = arrayM;
+        
+        if (success) {
+            success(result);
+        }
+    } failure:^(id ERRMSG) {
+        result.hasdata = NO;
+        if (success) {
             success(result);
         }
     }];
