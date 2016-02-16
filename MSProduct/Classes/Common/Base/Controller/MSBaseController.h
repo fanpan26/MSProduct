@@ -15,4 +15,6 @@
 -(void)showLoading;
 
 -(void)hideLoading;
+
+-(void)pushController:(UIViewController *)controller;
 @end

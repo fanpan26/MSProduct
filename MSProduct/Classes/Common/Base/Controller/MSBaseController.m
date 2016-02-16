@@ -25,14 +25,21 @@
 
 
 - (void) showLoading{
-    if (!_loadingView) {
-        _loadingView = [[MSLoadingView alloc] init];
-    }
-    [_loadingView showLoading:self.navigationController.view];
+    _hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//    if (!_loadingView) {
+//        _loadingView = [[MSLoadingView alloc] init];
+//    }
+//    [_loadingView showLoading:self.navigationController.view];
 }
 - (void)hideLoading
 {
-    [_loadingView endLoading];
+    //[_loadingView endLoading];
+    [_hud hide:YES];
+}
+
+-(void)pushController:(UIViewController *)controller
+{
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(instancetype)init

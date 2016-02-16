@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MSUserCard.h"
+#import "MSBaseTableController.h"
 
 @interface MSUserCardInfo  : NSObject
 
@@ -24,6 +25,8 @@
 
 @end
 
-@interface MSUserCardController : UITableViewController
+@interface MSUserCardController : MSBaseTableController
+
+@property(nonatomic,assign) NSInteger userCvNumber;
 
 @end

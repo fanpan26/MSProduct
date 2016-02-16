@@ -10,4 +10,11 @@
 
 @implementation MSBaseUser
 
+-(void)setCvnumber:(NSInteger)cvnumber
+{
+    _cvnumber = cvnumber;
+    self.PK = [NSString stringWithFormat:@"%ld",cvnumber];
+}
+
+
 @end

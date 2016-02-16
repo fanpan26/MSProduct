@@ -10,6 +10,11 @@
 		2C0D27281C68D44000618AE4 /* MSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D27271C68D44000618AE4 /* MSSearchBar.m */; };
 		2C66ECC61C6C9FFD00405E40 /* MSMyCellTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ECC51C6C9FFD00405E40 /* MSMyCellTopView.m */; };
 		2C66ECC91C6CC0A800405E40 /* MSMyCellTopViewDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66ECC81C6CC0A800405E40 /* MSMyCellTopViewDetailCell.m */; };
+		2C7A2EC61C6ECE5200EAAE90 /* MSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A2EC31C6ECE5200EAAE90 /* MSDBManager.m */; };
+		2C7A2EC71C6ECE5200EAAE90 /* MSDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A2EC51C6ECE5200EAAE90 /* MSDBModel.m */; };
+		2C7E1A491C6D81B40001C021 /* MSMyCellLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E1A481C6D81B40001C021 /* MSMyCellLabelView.m */; };
+		2C7E1A4C1C6D9D5B0001C021 /* MSDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E1A4B1C6D9D5B0001C021 /* MSDataBase.m */; };
+		2C7E1A4F1C6D9FE60001C021 /* MSDBField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7E1A4E1C6D9FE60001C021 /* MSDBField.m */; };
 		2C7FB16E1C683BD3002E2FFA /* NSString+MS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB16D1C683BD3002E2FFA /* NSString+MS.m */; };
 		2C7FB1711C685135002E2FFA /* MSTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB1701C685135002E2FFA /* MSTool.m */; };
 		2C7FB1741C686650002E2FFA /* MSScrollImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FB1731C686650002E2FFA /* MSScrollImageCell.m */; };
@@ -82,7 +87,6 @@
 		2CBF722E1C6C3AE000A9DA5A /* MSSettingLogOutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF722D1C6C3AE000A9DA5A /* MSSettingLogOutCell.m */; };
 		2CBF72311C6C3DB700A9DA5A /* MSSettingNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF72301C6C3DB700A9DA5A /* MSSettingNormalCell.m */; };
 		2CDB91851C6228C1003A631F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB91841C6228C1003A631F /* main.m */; };
-		2CDB91901C6228C1003A631F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CDB918F1C6228C1003A631F /* Assets.xcassets */; };
 		2CDB919E1C622E76003A631F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDB919D1C622E76003A631F /* AppDelegate.m */; };
 		2CE418491C62334400CC617F /* MSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE418481C62334400CC617F /* MSBaseController.m */; };
 		2CE4184C1C62336100CC617F /* MSBaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE4184B1C62336100CC617F /* MSBaseTableController.m */; };
@@ -555,6 +559,17 @@
 		2C66ECC51C6C9FFD00405E40 /* MSMyCellTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMyCellTopView.m; sourceTree = "<group>"; };
 		2C66ECC71C6CC0A800405E40 /* MSMyCellTopViewDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMyCellTopViewDetailCell.h; sourceTree = "<group>"; };
 		2C66ECC81C6CC0A800405E40 /* MSMyCellTopViewDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMyCellTopViewDetailCell.m; sourceTree = "<group>"; };
+		2C7A2EC21C6ECE5200EAAE90 /* MSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBManager.h; sourceTree = "<group>"; };
+		2C7A2EC31C6ECE5200EAAE90 /* MSDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBManager.m; sourceTree = "<group>"; };
+		2C7A2EC41C6ECE5200EAAE90 /* MSDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBModel.h; sourceTree = "<group>"; };
+		2C7A2EC51C6ECE5200EAAE90 /* MSDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBModel.m; sourceTree = "<group>"; };
+		2C7E1A471C6D81B40001C021 /* MSMyCellLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSMyCellLabelView.h; sourceTree = "<group>"; };
+		2C7E1A481C6D81B40001C021 /* MSMyCellLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSMyCellLabelView.m; sourceTree = "<group>"; };
+		2C7E1A4A1C6D9D5B0001C021 /* MSDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDataBase.h; sourceTree = "<group>"; };
+		2C7E1A4B1C6D9D5B0001C021 /* MSDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDataBase.m; sourceTree = "<group>"; };
+		2C7E1A4D1C6D9FE60001C021 /* MSDBField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDBField.h; sourceTree = "<group>"; };
+		2C7E1A4E1C6D9FE60001C021 /* MSDBField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDBField.m; sourceTree = "<group>"; };
+		2C7E1A511C6DCC5F0001C021 /* MSTableConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSTableConfig.h; sourceTree = "<group>"; };
 		2C7FB16C1C683BD3002E2FFA /* NSString+MS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MS.h"; sourceTree = "<group>"; };
 		2C7FB16D1C683BD3002E2FFA /* NSString+MS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MS.m"; sourceTree = "<group>"; };
 		2C7FB16F1C685135002E2FFA /* MSTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTool.h; sourceTree = "<group>"; };
@@ -669,7 +684,6 @@
 		2CBF72301C6C3DB700A9DA5A /* MSSettingNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSettingNormalCell.m; sourceTree = "<group>"; };
 		2CDB91801C6228C1003A631F /* MSProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDB91841C6228C1003A631F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CDB918F1C6228C1003A631F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CDB91941C6228C1003A631F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CDB919C1C622E76003A631F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CDB919D1C622E76003A631F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1171,6 +1185,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2C7A2EC11C6ECE5200EAAE90 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C7A2EC21C6ECE5200EAAE90 /* MSDBManager.h */,
+				2C7A2EC31C6ECE5200EAAE90 /* MSDBManager.m */,
+				2C7A2EC41C6ECE5200EAAE90 /* MSDBModel.h */,
+				2C7A2EC51C6ECE5200EAAE90 /* MSDBModel.m */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
 		2C7FEB781C63450D00183315 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,7 +1360,6 @@
 		2CDB91831C6228C1003A631F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2CDB918F1C6228C1003A631F /* Assets.xcassets */,
 				2CDB91941C6228C1003A631F /* Info.plist */,
 				2CDB91841C6228C1003A631F /* main.m */,
 			);
@@ -1423,6 +1447,8 @@
 				2C66ECC51C6C9FFD00405E40 /* MSMyCellTopView.m */,
 				2C66ECC71C6CC0A800405E40 /* MSMyCellTopViewDetailCell.h */,
 				2C66ECC81C6CC0A800405E40 /* MSMyCellTopViewDetailCell.m */,
+				2C7E1A471C6D81B40001C021 /* MSMyCellLabelView.h */,
+				2C7E1A481C6D81B40001C021 /* MSMyCellLabelView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1626,8 +1652,13 @@
 		2CE4183E1C6231EF00CC617F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2C7A2EC11C6ECE5200EAAE90 /* DBManager */,
 				2C7FB16F1C685135002E2FFA /* MSTool.h */,
 				2C7FB1701C685135002E2FFA /* MSTool.m */,
+				2C7E1A4A1C6D9D5B0001C021 /* MSDataBase.h */,
+				2C7E1A4B1C6D9D5B0001C021 /* MSDataBase.m */,
+				2C7E1A4D1C6D9FE60001C021 /* MSDBField.h */,
+				2C7E1A4E1C6D9FE60001C021 /* MSDBField.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -3419,6 +3450,7 @@
 				2CE41CA61C62398D00CC617F /* MSSystem.m */,
 				2C98C4611C6412E8001510C0 /* MSApiConfig.h */,
 				2CA33EB91C64550100D0DA03 /* MSFrameConfig.h */,
+				2C7E1A511C6DCC5F0001C021 /* MSTableConfig.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -3874,7 +3906,6 @@
 				2CE41BA41C62386C00CC617F /* Contents.json in Resources */,
 				2CE41B4C1C62386C00CC617F /* statusdetail_comment_top_rule@2x.png in Resources */,
 				2CE41B891C62386C00CC617F /* navigationbar_pop@2x.png in Resources */,
-				2CDB91901C6228C1003A631F /* Assets.xcassets in Resources */,
 				2CE41C0C1C62386C00CC617F /* navigationbar_more@2x.png in Resources */,
 				2CE41C5F1C62386C00CC617F /* tabbar_compose_button_highlighted@3x.png in Resources */,
 				2CE41C4A1C62386C00CC617F /* popover_background_left@2x.png in Resources */,
@@ -4056,18 +4087,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE418491C62334400CC617F /* MSBaseController.m in Sources */,
+				2C7E1A491C6D81B40001C021 /* MSMyCellLabelView.m in Sources */,
 				2CE4184C1C62336100CC617F /* MSBaseTableController.m in Sources */,
 				2C8BAC371C67A1710030E0F4 /* MSBaseResult.m in Sources */,
 				2CBF722B1C6C3A6D00A9DA5A /* UIButton+MS.m in Sources */,
 				2CA33EBC1C6456C200D0DA03 /* MSPeopleCellFrame.m in Sources */,
 				2C7FEB741C63446500183315 /* MSSettingController.m in Sources */,
 				2C66ECC61C6C9FFD00405E40 /* MSMyCellTopView.m in Sources */,
+				2C7E1A4C1C6D9D5B0001C021 /* MSDataBase.m in Sources */,
 				2C98C4651C64144F001510C0 /* MSHttpManager.m in Sources */,
 				2C7FEB7E1C63535B00183315 /* UIColor+MS.m in Sources */,
 				2CF492091C6A32F100EC690F /* MSLoadingView.m in Sources */,
 				2C7FEB8E1C63708700183315 /* UIImage+MS.m in Sources */,
 				2C7FEB941C63710900183315 /* MSPeopleCell.m in Sources */,
 				2C7FB1741C686650002E2FFA /* MSScrollImageCell.m in Sources */,
+				2C7E1A4F1C6D9FE60001C021 /* MSDBField.m in Sources */,
 				2C7FEB771C6344A000183315 /* MSThingController.m in Sources */,
 				2C7FEB911C6370A000183315 /* UIImage+MS.m in Sources */,
 				2C95A31E1C69CE6B00134BC3 /* MSThingCell.m in Sources */,
@@ -4097,9 +4131,11 @@
 				2C66ECC91C6CC0A800405E40 /* MSMyCellTopViewDetailCell.m in Sources */,
 				2C7FEB881C636EC000183315 /* MSBaseCell.m in Sources */,
 				2CBF72311C6C3DB700A9DA5A /* MSSettingNormalCell.m in Sources */,
+				2C7A2EC61C6ECE5200EAAE90 /* MSDBManager.m in Sources */,
 				2CE418521C62365100CC617F /* MSNavigationController.m in Sources */,
 				2CA33EC51C647F2A00D0DA03 /* MSUserData.m in Sources */,
 				2CDB919E1C622E76003A631F /* AppDelegate.m in Sources */,
+				2C7A2EC71C6ECE5200EAAE90 /* MSDBModel.m in Sources */,
 				2CE4184F1C6235F300CC617F /* MSMeController.m in Sources */,
 				2C98C4681C6438B6001510C0 /* MSDataFactory.m in Sources */,
 				2CB1FC5F1C6746E400A52129 /* MSUserCardController.m in Sources */,

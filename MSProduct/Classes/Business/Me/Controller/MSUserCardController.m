@@ -153,7 +153,9 @@ typedef NS_ENUM(NSInteger, MSUserCardCellType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    if (self.userCvNumber == 0) {
+        self.userCvNumber = 131276;
+    }
     [self loadData];
     
     [self setUpTableView];
@@ -161,7 +163,7 @@ typedef NS_ENUM(NSInteger, MSUserCardCellType) {
 
 - (void)loadData
 {
-    [[[MSUserData alloc] init] getUserInfo:131276 success:^(MSUserCard *card) {
+    [[[MSUserData alloc] init] getUserInfo:self.userCvNumber success:^(MSUserCard *card) {
         if (card) {
             _userInfoArray = [MSUserCardInfo initWithMSUserCard:card];
             [self.tableView reloadData];

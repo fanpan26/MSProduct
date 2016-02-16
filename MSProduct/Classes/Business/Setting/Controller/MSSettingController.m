@@ -30,6 +30,7 @@ static NSString *const kMSLogoutCellID = @"MS_LOGOUT_CELL";
     [super viewDidLoad];
     [self buildUI];
     [self loadData];
+    
 }
 
 -(void)buildUI
@@ -43,13 +44,11 @@ static NSString *const kMSLogoutCellID = @"MS_LOGOUT_CELL";
 
 -(void)loadData
 {
-    [self showLoading];
     arrayAboutsData  = [NSMutableArray array];
     WS(aboutSelf)
     [[MSUserData alloc] getListAbout:^(MSAboutResult *about) {
         [arrayAboutsData addObjectsFromArray:about.abouts];
         [aboutSelf reloadData];
-        [aboutSelf hideLoading];
     }];
 }
 

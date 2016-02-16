@@ -99,9 +99,9 @@
     pageControl.numberOfPages = self.scrollImages.count;
     CGSize controlSize = [pageControl sizeForNumberOfPages:self.scrollImages.count];
     pageControl.bounds = CGRectMake(0, 0, controlSize.width, controlSize.height);
-    pageControl.center = CGPointMake(self.center.x, 130);
+    pageControl.center = CGPointMake(kMSScreenWidth - pageControl.frame.size.width * 0.5, 140);
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
-    pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     [pageControl addTarget:self action:@selector(pageChanged:) forControlEvents:UIControlEventValueChanged];
     pageControl.currentPage = 0;
     [self.contentView addSubview:pageControl];
@@ -138,6 +138,19 @@
         [imageView setImageWithUrl:imageUrl placeHolder:nil];
         imageView.userInteractionEnabled = YES;
         imageView.frame = CGRectMake(kMSScreenWidth * i, 0, kMSScreenWidth, kImageScrollImageHeight);
+        //添加label
+        CGFloat labelY = 130;
+        UIView *labelView = [[UIView alloc] initWithFrame:CGRectMake(0, labelY, kMSScreenWidth, kImageScrollImageHeight - labelY)];
+        //labelView.backgroundColor = kMSColor(153, 167, 196);
+        
+        UILabel *nameLabel = [[UILabel alloc] init];
+        nameLabel.text = [displayUser.name stringByAppendingString:displayUser.title ? displayUser.title : @""];
+        nameLabel.frame = CGRectMake(0, 0, kMSScreenWidth * 0.7, labelView.frame.size.height);
+        nameLabel.backgroundColor = [UIColor clearColor];
+        nameLabel.textColor = [UIColor whiteColor];
+        nameLabel.font = kMSFont(13);
+        [labelView addSubview:nameLabel];
+        [imageView addSubview: labelView];
         [_scrollView addSubview:imageView];
     }
     //设置完图片后在添加并添加到contentview上
@@ -152,6 +165,10 @@
     [super setFrame:frame];
 }
 
+-(void)dealloc
+{
+    [_timer invalidate];
+}
 
 
 @end

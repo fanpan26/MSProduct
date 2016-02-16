@@ -15,6 +15,7 @@
 #import "MSDisplayUser.h"
 #import "MSScrollImageCell.h"
 #import "MSSearchBar.h"
+#import "MSUserCardController.h"
 
 @interface MSPeopleController()
 {
@@ -158,6 +159,14 @@ static NSString *const kMSPeopleDisplayCellID = @"MS_CELL_PEOPLE_DISPLAY";
 {
     
     return arrayListUsers.count + 1;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MSPeopleCellFrame *f = arrayListUsers[indexPath.row - 1];
+    MSUserCardController *userController = [[MSUserCardController alloc] init];
+    userController.userCvNumber = f.user.cvnumber;
+    [self pushController:userController];
 }
 
 @end

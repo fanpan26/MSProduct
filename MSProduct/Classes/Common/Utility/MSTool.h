@@ -15,8 +15,11 @@ single_interface(MSTool)
 
 -(NSString *)filterHTML:(NSString *)string;
 
-
 -(NSString *)handleNULL:(id)string;
 
 -(NSString *)transDateFromInt:(NSInteger)time;
+
+-(void)setLocalValue:(id)value forKey:(NSString *)key;
+
+-(id)getLocalValueForKey:(NSString *)key;
 @end

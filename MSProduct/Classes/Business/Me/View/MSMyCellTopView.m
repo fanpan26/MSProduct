@@ -14,7 +14,10 @@
 #import "NSString+MS.h"
 #import "MSMyCellTopViewDetailCell.h"
 #import "UIImage+MS.h"
+#import "MSMyCellLabelView.h"
+#import "MSUserCardController.h"
 
+static NSString *const kMSTopViewDetailCellID = @"MS_MY_TOP_TABLE_VIEW_CELL";
 
 @interface MSMyCellTopView()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -44,35 +47,15 @@
     photoView.photoType = MSPhotoViewTypeRound;
     [self addSubview:photoView];
     //添加姓名
-    UILabel *name = [[UILabel alloc] init];
-    name.font = kMSFont(17);
-    name.textColor = [UIColor whiteColor];
-    
-    NSString *nameStr = @"范月盘";
-    name.text = nameStr;
-    CGFloat nameY = CGRectGetMaxY(photoView.frame) + kMSTableViewCellMargin;
-    CGSize nameSize = [nameStr sizeSingleLineWithFont:kMSFont(17)];
-    name.frame = CGRectMake(0, nameY, nameSize.width , nameSize.height);
-    name.center = CGPointMake(kMSScreenWidth * 0.5, nameY + nameSize.height * 0.5);
-    [self addSubview:name];
-    //添加身份
-    UILabel *identity = [[UILabel alloc] init];
-    identity.font = kMSFont(17);
-    identity.textColor = [UIColor whiteColor];
-    
-    NSString *identityStr = @"天才在线科技有限公司 研发工程师";
-    identity.text = identityStr;
-    identity.font = kMSFont(16);
-    CGSize identitySize = [identityStr sizeSingleLineWithFont:kMSFont(16)];
-    CGFloat identityY = CGRectGetMaxY(name.frame) + kMSTableViewCellMargin;
-    identity.frame = CGRectMake(0, identityY, identitySize.width, identitySize.height);
-    identity.center = CGPointMake(kMSScreenWidth * 0.5, identityY + identitySize.height * 0.5);
-    [self addSubview:identity];
-    //添加tableview
-    CGFloat tableY = CGRectGetMaxY(identity.frame) + kMSTableViewCellMargin;
+    CGFloat labelViewY = CGRectGetMaxY(photoView.frame);
+    NSArray *texts = [NSArray arrayWithObjects:@"范月盘",@"天才在线工程师",@"人力资源管理一班", nil];
+    MSMyCellLabelView *labelView = [[MSMyCellLabelView alloc] initWithFrame:CGRectMake(0, labelViewY, kMSScreenWidth, 0) texts:texts];
+    [self addSubview:labelView];
+      //添加tableview
+    CGFloat tableY = CGRectGetMaxY(labelView.frame);
     CGRect tableFrame = CGRectMake(kMSTableViewCellPaddingLeft, tableY, kMSScreenWidth - 2 *kMSTableViewPaddingLeftRight , 44 * 4 + 3);
     UITableView *tableView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
-    [tableView registerClass:[MSMyCellTopViewDetailCell class] forCellReuseIdentifier:@"MS_MY_TOP_TABLE_VIEW_CELL"];
+    [tableView registerClass:[MSMyCellTopViewDetailCell class] forCellReuseIdentifier:kMSTopViewDetailCellID];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -83,7 +66,7 @@
     CGFloat viewHeight = CGRectGetMaxY(tableView.frame) + 5;
     _viewHeight = viewHeight;
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.frame = CGRectMake(0, viewHeight - 5, self.frame.size.width, 5);
+    bottomView.frame = CGRectMake(0, viewHeight - 4, self.frame.size.width, 5);
     bottomView.backgroundColor = kMSThingTableViewBackGroundColor;
     [self addSubview:bottomView];
     //先添加背景颜色
@@ -103,17 +86,26 @@
     return 1;
 }
 
--(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return NO;
-}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MSMyCellTopViewDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MS_MY_TOP_TABLE_VIEW_CELL"];
+    MSMyCellTopViewDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:kMSTopViewDetailCellID];
     [cell setCardTitle: myCardArray[indexPath.row]];
     cell.hasLine = indexPath.row < 3;
     return  cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self didClickedCell:indexPath];
+}
+
+-(void) didClickedCell:(NSIndexPath *)indexPath
+{
+    if ([_delegate respondsToSelector:@selector(topView:didClickedCellofType:)]) {
+        [_delegate topView:self didClickedCellofType:indexPath.row];
+    }
 }
 
 -(void)setFrame:(CGRect)frame

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MSTabBarController.h"
+#import "MSTool.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [self prepareTables];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[MSTabBarController alloc] init];
@@ -44,6 +48,28 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/*create fmdb*/
+
+-(void)prepareTables
+{
+//    NSString *hasCreate =[[MSTool sharedMSTool] getLocalValueForKey:@"MS_CREATE_TABLE"];
+//     if ([hasCreate isEqualToString: @"OK"] ) {
+//        NSLog(@"已经创建过表了，不需要再次创建");
+//        return;
+//     }
+//     //MS_UserInfo
+//     NSMutableArray *array = [NSMutableArray array];
+//     [array addObject:[[MSDBField alloc] initWithName:@"cvnumber" type:MSDBFieldTypeInteger]];
+//     NSArray *arrayFields = [NSArray arrayWithObjects:@"name",@"headphotos",@"company",@"email",@"mobile",@"position",@"landline",@"weixin",@"address",@"ability",@"achieve",@"identitytitle",nil];
+//     for (int i = 0; i < arrayFields.count; i ++) {
+//      [array addObject:[[MSDBField alloc] initDefaultTypeWithName:arrayFields[i]]];
+//     }
+//     [array addObject:[[MSDBField alloc] initWithName:@"hidemobile" type:MSDBFieldTypeInteger]];
+//     //创建userInfo表
+//     [[MSDataBase sharedMSDataBase] createTable:@"MS_UserInfo" fields:array];
+//     [[MSTool sharedMSTool] setLocalValue:@"OK" forKey:@"MS_CREATE_TABLE"];
 }
 
 @end

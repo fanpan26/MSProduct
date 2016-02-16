@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MSDBModel.h"
 
-@interface MSBaseUser : NSObject
+@interface MSBaseUser : MSDBModel
 {
     NSString *_name;
     NSString *_headphoto;

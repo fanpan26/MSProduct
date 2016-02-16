@@ -41,5 +41,19 @@ single_implementation(MSTool);
 {
    return @"2016-01-01 12:05:46";
 }
+-(void)setLocalValue:(id)value forKey:(NSString *)key
+{
+    if (value == nil) {
+        return;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(id)getLocalValueForKey:(NSString *)key
+{
+   id val = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    return  val;
+}
 
 @end

@@ -15,7 +15,7 @@
 #import "MSSystem.h"
 #import "MSMyCellTopView.h"
 
-@interface MSMeController()
+@interface MSMeController()<MSMyCellTopViewDelagate>
 
 @end
 
@@ -25,15 +25,46 @@
 {
     [super viewDidLoad];
     [self buildUI];
+    [self loadUserCard];
+}
+
+-(void)loadUserCard
+{
+//    dispatch_queue_t readDataQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_async(readDataQueue, ^{
+//        [[MSUserData alloc] getUserInfo:131742 success:nil];
+//    });
 }
 
 -(void)buildUI
 {
     self.title = @"我的";
     MSMyCellTopView *topView = [[MSMyCellTopView alloc] initWithFrame:CGRectMake(0, 0, kMSScreenWidth, 0)];
+    topView.delegate = self;
     self.tableView.tableHeaderView = topView;
     self.tableView.backgroundColor = kMSThingTableViewBackGroundColor;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CELL"];
+}
+
+-(void)topView:(MSMyCellTopView *)topView didClickedCellofType:(MSTopViewCellType)type
+{
+    MSBaseController *controller;
+    switch (type) {
+        case MSTopViewCellTypeMessage:
+            break;
+        case MSTopViewCellTypeCard:
+            controller = [[MSUserCardController alloc] init];
+            break;
+        case MSTopViewCellTypeGroup:
+            break;
+        case MSTopViewCellTypeLenged:
+            break;
+        default:
+            break;
+    }
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,7 +88,7 @@
 
 - (void)push
 {
-    MSUserCardController *userCardController = [[MSUserCardController alloc] initWithStyle:UITableViewStylePlain];
+    MSUserCardController *userCardController = [[MSUserCardController alloc] init];
     [self.navigationController pushViewController:userCardController animated:YES];
 }
 

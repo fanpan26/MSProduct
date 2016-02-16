@@ -13,9 +13,13 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dict
 {
     if (self = [super init]) {
+       
         _address = [self resetValue:dict[@"address"]];//
         _company = [self resetValue:dict[@"company"]];//
         _cvnumber = [dict[@"cvnumber"] longLongValue];
+        
+        self.PK = dict[@"cvnumber"];
+        
         _email = [self resetValue:dict[@"email"]];
         _headphoto = [self resetValue:dict[@"headphoto"]];
         _identitytitle =[self resetValue:dict[@"identity_title"]];

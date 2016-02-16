@@ -56,3 +56,6 @@
 /*事情列表*/
 #define kMSThingTableViewBackGroundColor kMSColor(236,236,236)
 #define kMSThingArticleLabelFont kMSFont(12)
+/*我的页面*/
+
+#define kMSMyTopViewDetailsFont kMSFont(16)

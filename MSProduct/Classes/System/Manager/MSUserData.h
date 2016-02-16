@@ -7,7 +7,6 @@
 //
 
 #import "MSDataFactory.h"
-
 @class  MSUserCard;
 @class  MSPeopleResult;
 @class  MSThingResult;

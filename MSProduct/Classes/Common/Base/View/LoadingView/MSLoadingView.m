@@ -32,7 +32,7 @@
 {
     CGPoint center = self.center;
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(center.x - 50, center.y - 22, 100, 44)];
-    view.backgroundColor = [UIColor lightGrayColor];
+    view.backgroundColor = [UIColor clearColor];
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc] init];
     CGRect indicatorFrame = CGRectMake(45, 22,0,0);
     indicator.frame = indicatorFrame;
